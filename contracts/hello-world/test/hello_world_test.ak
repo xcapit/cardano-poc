@@ -1,11 +1,5 @@
-use aiken/assert
 use cardano/transaction.{OutputReference, Transaction}
 use validators/hello_world.{Datum, Redeemer, hello_world}
-
-pub fn debug_test() {
-  let test_result = hello_world_test()
-  assert.ok(test_result, "Test failed!")
-}
 
 test hello_world_test() {
   let datum =
