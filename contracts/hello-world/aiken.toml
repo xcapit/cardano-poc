@@ -16,6 +16,3 @@ version = "v2.2.0"
 source = "github"
 
 [config]
-
-[build]
-tests = true
