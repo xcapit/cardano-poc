@@ -1,5 +1,5 @@
 use cardano/transaction.{OutputReference, Transaction}
-use hello_world.{hello_world}
+use hello_world
 use types_hello_world.{Datum, Redeemer}
 
 test hello() {
