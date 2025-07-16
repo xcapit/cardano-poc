@@ -3,13 +3,13 @@ use aiken/crypto.{VerificationKeyHash}
 use aiken/primitive/string
 use cardano/transaction.{OutputReference, Transaction}
 
-pub type Datum {
-  owner: VerificationKeyHash,
-}
+// pub type Datum {
+//   owner: VerificationKeyHash,
+// }
 
-pub type Redeemer {
-  msg: ByteArray,
-}
+// pub type Redeemer {
+//   msg: ByteArray,
+// }
 
 validator hello_world {
   spend(
