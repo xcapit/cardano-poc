@@ -39,6 +39,6 @@ test hello_world_example() {
     Some(datum),
     redeemer,
     placeholder_utxo,
-    transaction.placeholder,
+    Transaction{}transaction.placeholder,
   )
 }
