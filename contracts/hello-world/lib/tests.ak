@@ -1,6 +1,7 @@
 use cardano/transaction.{OutputReference, Transaction}
 use hello_world
-use types_hello_world.{Datum, Redeemer}
+
+// use types_hello_world.{Datum, Redeemer}
 
 test hello() {
   let datum =
