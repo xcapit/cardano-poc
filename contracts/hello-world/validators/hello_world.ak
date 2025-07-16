@@ -18,8 +18,8 @@ validator hello_world {
     _own_ref: OutputReference,
     self: Transaction,
   ) {
-    expect Some(Datum { owner }) = datum
     trace @"redeemer": string.from_bytearray(redeemer.msg)
+    expect Some(Datum { owner }) = datum
     let must_say_hello = redeemer.msg == "Hello, World!"
     let must_be_signed = list.has(self.extra_signatories, owner)
     must_say_hello && must_be_signed
