@@ -6,7 +6,7 @@ use cardano/transaction.OutputReference
 test "hello_world accepts correct msg and signer" {
   let datum =
     hello_world.Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
-  let redeemer = hello_world.Redeemer { msg: "Hello, World!" }
+  let redeemer = hello_world.Redeemer { msg: "Hellos, World!" }
   let placeholder_utxo = OutputReference { transaction_id: "", output_index: 0 }
   let tx =
     transaction.Transaction {
