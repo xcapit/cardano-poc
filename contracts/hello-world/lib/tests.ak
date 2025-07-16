@@ -1,3 +1,5 @@
+validators/hello_world.{Datum}
+
 test hello() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
