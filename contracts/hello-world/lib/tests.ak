@@ -11,5 +11,5 @@ test hello() {
       ..transaction.placeholder,
       extra_signatories: [datum.owner],
     }
-  hello_world.spend(Some(datum), redeemer, placeholder_utxo, tx)
+  spend(Some(datum), redeemer, placeholder_utxo, tx)
 }
