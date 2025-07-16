@@ -3,6 +3,7 @@ use aiken/primitive/string
 use cardano/transaction.{OutputReference, Transaction}
 use types_hello_world.{Datum, Redeemer}
 
+// se movio a un lib 
 // pub type Datum {
 //   owner: VerificationKeyHash,
 // }
