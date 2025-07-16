@@ -1,8 +1,6 @@
 use aiken/transaction.{OutputReference, Transaction}
 use hello_world.{Datum, Redeemer, hello_world}
 
-// Importamos el validador y sus tipos
-
 test hello() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
