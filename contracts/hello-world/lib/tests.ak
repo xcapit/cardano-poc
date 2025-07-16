@@ -1,4 +1,4 @@
-use validators/hello_world
+validator validators/hello_world
 
 test hello() {
   let datum =
