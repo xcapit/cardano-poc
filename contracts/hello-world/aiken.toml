@@ -10,12 +10,8 @@ user = "aiken-lang"
 project = "hello-world"
 platform = "github"
 
-[[dependencies]]
-name = "aiken-lang/stdlib"
-version = "v2.2.0"
-source = "github"
-
 [dependencies]
+aiken-lang/stdlib = { version = "v2.2.0", source = "github" }
 validators = { path = "./validators" }
 
 [config]
