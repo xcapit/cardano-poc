@@ -30,7 +30,6 @@ validator hello_world {
   }
 }
 
-// ... rest of the code is unchanged
 test hello_world_example() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
