@@ -1,4 +1,3 @@
-validator 
 test hello_world() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
