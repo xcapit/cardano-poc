@@ -7,9 +7,6 @@ test hello() {
   let redeemer = Redeemer { msg: "Hello, World!" }
   let placeholder_utxo = OutputReference { transaction_id: "", output_index: 0 }
   let tx =
-    transaction.Transaction {
-      ..transaction.placeholder,
-      extra_signatories: [datum.owner],
-    }
+    Transaction { ..Transaction.placeholder, extra_signatories: [datum.owner] }
   hello_world.spend(Some(datum), redeemer, placeholder_utxo, tx)
 }
