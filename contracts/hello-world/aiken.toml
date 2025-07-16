@@ -16,5 +16,4 @@ version = "v2.2.0"
 source = "github"
 validators = { path = "./validators" }
 
-
 [config]
