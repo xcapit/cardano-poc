@@ -1,6 +1,11 @@
 use cardano/transaction.{OutputReference, Transaction}
 use validators/hello_world.{Datum, Redeemer, hello_world}
 
+test debug_test() {
+  trace "¡Este mensaje debe aparecer!"
+  True
+}
+
 test hello_world_test() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
