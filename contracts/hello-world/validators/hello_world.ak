@@ -6,3 +6,7 @@ use cardano/transaction.{OutputReference, Transaction}
 pub type Datum {
   owner: VerificationKeyHash,
 }
+
+pub type Redeemer {
+  msg: ByteArray,
+}
