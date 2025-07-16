@@ -3,7 +3,7 @@ use validators.hello_world
 use cardano/transaction
 use cardano/transaction.OutputReference
 
-test hello_world() {
+test "hello_world accepts correct msg and signer" {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
   let redeemer = Redeemer { msg: "Hello, World!" }
