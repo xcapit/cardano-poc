@@ -30,7 +30,7 @@ validator hello_world {
   }
 }
 
-test hello() {
+test "should" {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
   let redeemer = Redeemer { msg: "Hello, World!" }
