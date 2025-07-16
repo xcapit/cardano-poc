@@ -1,6 +1,6 @@
 // Importa desde validators/
 use cardano/transaction.{OutputReference, Transaction}
-use validators/hello_world.{Datum, Redeemer, hello_world}
+use ./validators/hello_world.{Datum, Redeemer, hello_world}
 
 test hello() {
   let datum =
