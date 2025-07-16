@@ -13,8 +13,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
     when rdmr is {
-        CheckMint ->
-            
+      CheckMint -> todo @"mint"
     }
   }
 
