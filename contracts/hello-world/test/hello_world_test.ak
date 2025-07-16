@@ -1,5 +1,6 @@
-use aiken/transaction.{OutputReference, Transaction}
-use hello_world.{Datum, Redeemer}
+// Importa desde validators/
+use cardano/transaction.{OutputReference, Transaction}
+use validators/hello_world.{Datum, Redeemer, hello_world}
 
 test hello() {
   let datum =
