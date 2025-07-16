@@ -16,13 +16,13 @@
       "datum": {
         "title": "datum",
         "schema": {
-          "$ref": "#/definitions/hello_world~1Datum"
+          "$ref": "#/definitions/types_hello_world~1Datum"
         }
       },
       "redeemer": {
         "title": "redeemer",
         "schema": {
-          "$ref": "#/definitions/hello_world~1Redeemer"
+          "$ref": "#/definitions/types_hello_world~1Redeemer"
         }
       },
       "compiledCode": "59010601010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400060166ea800e2b30013371e6eb8c038c030dd5003a450d48656c6c6f2c20576f726c642100899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5180718061baa0038a5040291640291640346eb8c034004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
@@ -45,7 +45,7 @@
       "title": "VerificationKeyHash",
       "dataType": "bytes"
     },
-    "hello_world/Datum": {
+    "types_hello_world/Datum": {
       "title": "Datum",
       "anyOf": [
         {
@@ -61,7 +61,7 @@
         }
       ]
     },
-    "hello_world/Redeemer": {
+    "types_hello_world/Redeemer": {
       "title": "Redeemer",
       "anyOf": [
         {
