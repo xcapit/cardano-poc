@@ -18,4 +18,4 @@ source = "github"
 [config]
 
 [build]
-tests = tru
+tests = true
