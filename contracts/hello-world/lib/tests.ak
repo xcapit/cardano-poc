@@ -1,4 +1,4 @@
-use hello_world.{Datum, Redeemer}
+use types_hello_world.{Datum, Redeemer}
 
 test hello() {
   let datum =
