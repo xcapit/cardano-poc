@@ -1,4 +1,4 @@
-use hello_world.{Datum}
+use hello_world.{Datum, Redeemer}
 
 test hello() {
   let datum =
