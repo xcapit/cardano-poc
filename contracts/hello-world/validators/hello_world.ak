@@ -4,14 +4,6 @@ use aiken/primitive/string
 use cardano/transaction.{OutputReference, Transaction}
 use lib/hello_world.{Datum, Redeemer}
 
-pub type Datum {
-  owner: VerificationKeyHash,
-}
-
-pub type Redeemer {
-  msg: ByteArray,
-}
-
 validator hello_world {
   spend(
     datum: Option<Datum>,
