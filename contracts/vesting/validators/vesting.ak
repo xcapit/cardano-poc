@@ -42,17 +42,9 @@ fn vesting_datum() {
 test vesting_owner() {
   let datum = vesting_datum()
   let tx =
-    when datum is {
-      Some(datum) ->
-        transaction.Transaction {
-          ..transaction.placeholder,
-          extra_signatories: [datum.owner],
-        }
-      None ->
-        transaction.Transaction {
-          ..transaction.placeholder,
-          extra_signatories: [],
-        }
+    transaction.Transaction {
+      ..transaction.placeholder,
+      extra_signatories: [datum.owner],
     }
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
   vesting.spend(Some(datum), None, utxo, tx)
