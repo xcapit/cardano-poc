@@ -49,5 +49,5 @@ test vesting_owner() {
       ..transaction.placeholder,
       extra_signatories: [datum.owner],
     }
-  let utxo = vesting.spend(Some(datum), None, utxo, tx)
+  vesting.spend(Some(datum), None, utxo, tx)
 }
