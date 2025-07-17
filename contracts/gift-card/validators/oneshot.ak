@@ -32,8 +32,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 
 test check_mint() {
   let policy_id = mock_policy_id(1)
-  let asset_name = b
-  "GIFT"
+  let asset_name = "GIFT"
   let amount = 1
   let mint_dict =
     dict.new()
