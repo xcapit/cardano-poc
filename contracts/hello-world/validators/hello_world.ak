@@ -43,3 +43,8 @@ test hello() {
     }
   hello_world.spend(Some(datum), redeemer, placeholder_utxo, tx)
 }
+
+type TestCase {
+  is_owner_signed: Bool,
+  is_msg_hello_world: bool,
+}
