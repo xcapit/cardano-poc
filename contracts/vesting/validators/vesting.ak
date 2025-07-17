@@ -21,6 +21,7 @@ validator vesting {
       key_signed(tx.extra_signatories, datum.owner),
       and {
         key_signed(tx.extra_signatories, datum.beneficiary),
+        valid_after(tx.validity_range),
       },
     }
   }
