@@ -13,6 +13,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
   }
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
+    let Transaction { inputs, mint, .. } = transaction
     when rdmr is {
       CheckMint -> todo @"mint"
       CheckBurn -> todo @"burn"
