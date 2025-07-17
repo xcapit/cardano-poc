@@ -2,7 +2,7 @@ use aiken/collection/dict
 use aiken/collection/list
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction}
-use mocktail/virgin_key_hash.{, mock_pub_key_hash}
+use mocktail/virgin_key_hash. mock_pub_key_hash}
 
 pub type Action {
   CheckMint
