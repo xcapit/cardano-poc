@@ -31,6 +31,10 @@ validator vesting {
   }
 }
 
+fn vesting_datum() {
+  todo
+}
+
 test vesting_owner() {
   let datum =
     VestingDatum {
