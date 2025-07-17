@@ -1,4 +1,3 @@
-use aiken/builtin.{Interval, PosixTime}
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction, ValidityRange}
 use vodka_extra_signatories.{key_signed}
@@ -59,8 +58,8 @@ test vesting_beneficiary() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
-      validity_range: Interval {
-        lower: Some(datum.lock_until + 1 as PosixTime),
+      validity_range: transaction.ValidityRange {
+        lower: Some(datum.lock_until + 1),
         upper: None,
       },
     }
