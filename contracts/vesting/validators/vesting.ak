@@ -63,5 +63,6 @@ test vesting_beneficiary_fails_before_lock() {
 
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
 
+  expect throws
   vesting.spend(Some(datum), None, utxo, tx)
 }
