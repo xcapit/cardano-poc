@@ -1,7 +1,7 @@
 use aiken/collection/dict
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction} as tx
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
 
 type Action {
   CheckMint
@@ -36,9 +36,7 @@ test check_mint() {
   let amount = 1
 
   let tx =
-    mocktail.mocktail_tx()
-      |> mocktail.with_mint(mint_dict)
-      |> complete()
+    transaction.Transaction { ..transaction.placeholder, extra_signatories: [] }
 
   // Ejecutamos el validador con CheckMint
   gift_card.mint(CheckMint, policy_id, tx)
