@@ -36,7 +36,7 @@ test check_mint() {
   let amount = 1
 
   let tx =
-    transaction.Transaction {
+    tx.Transaction {
       ..transaction.placeholder,
       extra_signatories: [mock_pub_key_hash(1)],
     }
