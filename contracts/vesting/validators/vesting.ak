@@ -59,8 +59,8 @@ test vesting_beneficiary() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
-      validity_range: transaction.ValidityRange {
-        lower: Some(datum.lock_until + 1),
+      validity_range: Interval {
+        lower: Some(datum.lock_until + 1 as PosixTime), // Cast Int to PosixTime
         upper: None,
       },
     }
