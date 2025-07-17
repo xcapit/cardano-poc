@@ -11,7 +11,7 @@ validator vesting {
     datum: Option<VestingDatum>,
     _redeemer: Data,
     _utxo: OutputReference,
-    _self: Transaction,
+    tx: Transaction,
   ) {
     True
   }
