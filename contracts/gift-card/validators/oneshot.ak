@@ -1,7 +1,7 @@
 use aiken/collection/dict
 use aiken/collection/list
 use cardano/assets.{PolicyId}
-use cardano/transaction.{OutputReference, Transaction} as tx
+use cardano/transaction.{OutputReference, Transaction}
 
 pub type Action {
   CheckMint
