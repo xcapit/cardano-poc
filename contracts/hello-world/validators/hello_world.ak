@@ -63,7 +63,7 @@ test hello_mocktail() {
   let redeemer = Redeemer { msg: "Hello, World!" }
   let test_case = TestCase { is_owner_signed: True }
   let tx = get_test_tx(test_case)
-  let datum =
-    Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
+  let datum = mock_pub_key_hash(1)
+
   hello_world.spend(Some(datum), redeemer, out_ref, tx)
 }
