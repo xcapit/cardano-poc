@@ -42,6 +42,8 @@ fn vesting_datum() {
 
 test vesting_owner() {
   let datum = vesting_datum()
+  let out_ref = mock_utxo_ref(0, 0)
+
   let tx =
     transaction.Transaction {
       ..transaction.placeholder,
