@@ -30,5 +30,5 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 }
 
 test one_mint() {
-  gift_card.mint()
+  gift_card.mint(CheckMint)
 }
