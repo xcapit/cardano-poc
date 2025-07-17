@@ -51,4 +51,7 @@ type TestCase {
 
 fn get_test_tx(test_case: TestCase) {
   let TestCase { is_owner_signed, is_msg_say_hello } = test_case
+  mocktail_tx(){
+    |> required_signer_hash(is_owner_signed,mock_pub_hash(1))
+  }
 }
