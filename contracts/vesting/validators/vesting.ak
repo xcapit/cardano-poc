@@ -32,7 +32,11 @@ validator vesting {
 }
 
 fn vesting_datum() {
-  todo
+  VestingDatum {
+    lock_until: 10000,
+    owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  }
 }
 
 test vesting_owner() {
