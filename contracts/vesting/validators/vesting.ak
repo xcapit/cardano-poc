@@ -32,6 +32,7 @@ validator vesting {
 }
 
 test vesting_owner() {
-  let datum = None
+  let datum = Datum {lock_until = 10000, }
+  let tx 
   vesting.spend()
 }
