@@ -30,3 +30,7 @@ validator vesting {
     fail
   }
 }
+
+test vesting_owner() {
+  todo
+}
