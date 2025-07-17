@@ -1,5 +1,6 @@
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
+use mocktail/virgin_output_reference.{mock_utxo_ref}
 use vodka_extra_signatories.{key_signed}
 use vodka_validity_range.{valid_after}
 
@@ -46,6 +47,5 @@ test vesting_owner() {
       ..transaction.placeholder,
       extra_signatories: [datum.owner],
     }
-  let utxo = OutputReference { transaction_id: "", output_index: 0 }
-  vesting.spend(Some(datum), None, utxo, tx)
+  let utxo = vesting.spend(Some(datum), None, utxo, tx)
 }
