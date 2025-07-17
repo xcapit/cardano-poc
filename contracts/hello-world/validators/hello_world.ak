@@ -60,6 +60,7 @@ fn get_test_tx(test_case: TestCase) {
 }
 
 test hello_mocktail(){
-  let out_ref = mock_utxo_ref(0,0)
   let test_case = TestCase { is_owner_signed : True}
+  let tx = get_test_tx(test_case)
+  hello_world.spend(datum,)
 }
