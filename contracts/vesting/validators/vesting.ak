@@ -47,7 +47,7 @@ test vesting_owner() {
   vesting.spend(Some(datum), None, utxo, tx)
 }
 
-test vesting_owner() {
+test vesting_beneficiary() {
   let datum =
     VestingDatum {
       lock_until: 10000,
