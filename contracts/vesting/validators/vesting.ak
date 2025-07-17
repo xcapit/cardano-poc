@@ -34,8 +34,6 @@ validator vesting {
   }
 }
 
-type TestCase {TestCase}
-
 fn vesting_datum() {
   VestingDatum {
     lock_until: 10000,
