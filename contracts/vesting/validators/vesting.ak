@@ -40,7 +40,7 @@ fn vesting_datum() {
 }
 
 test vesting_owner() {
-  let datum = Some(vesting_datum())
+  let datum = vesting_datum()
   let tx =
     when datum is {
       Some(datum) ->
