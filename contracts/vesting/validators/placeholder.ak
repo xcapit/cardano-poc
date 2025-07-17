@@ -4,7 +4,7 @@ use cardano/certificate.{Certificate}
 use cardano/governance.{ProposalProcedure, Voter}
 use cardano/transaction.{OutputReference, Transaction}
 
-validator placeholder {
+validator vesting {
   spend(
     _datum: Option<Data>,
     _redeemer: Data,
