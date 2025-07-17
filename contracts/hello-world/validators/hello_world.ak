@@ -64,5 +64,7 @@ test hello_mocktail(){
   let redeemer = Redeemer { msg: "Hello, World!" }
   let test_case = TestCase { is_owner_signed : True}
   let tx = get_test_tx(test_case)
+  let datum =
+    Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
   hello_world.spend(datum,redeemer,out_ref,tx)
 }
