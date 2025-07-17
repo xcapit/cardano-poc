@@ -1,5 +1,7 @@
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
+use mocktail.{complete, invalid_before, mocktail_tx, required_signer_hash}
+use mocktail/virgin_key_hash.{mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
 use vodka_extra_signatories.{key_signed}
 use vodka_validity_range.{valid_after}
@@ -35,8 +37,8 @@ validator vesting {
 fn vesting_datum() {
   VestingDatum {
     lock_until: 10000,
-    owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    owner: mock_pub_key_hash(1),
+    beneficiary: mock_pub_key_hash(2),
   }
 }
 
@@ -64,5 +66,19 @@ fn get_test_tx(test_case: TestCase) {
   mocktail_tx()
     |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
     |> required_signer_hash(is_beneficiary_signed, mock_pub_key_hash(2))
+    |> invalid_before(10001)
     |> complete()
+}
+
+test vesting_owner_mocktail() {
+  let datum = Some(vesting_datum())
+  let test_case =
+    TestCase {
+      is_owner_signed: True,
+      is_beneficiary_signed: True,
+      is_lock_time_passed: True,
+    }
+  let out_ref = mock_utxo_ref(0, 0)
+  let tx = get_test_tx(test_case)
+  vesting.spend(datum, None, out_ref, tx)
 }
