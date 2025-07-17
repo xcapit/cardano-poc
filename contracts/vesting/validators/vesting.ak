@@ -18,6 +18,9 @@ validator vesting {
     expect Some(datum) = datum_opt
     or {
       key_signed(tx.extra_signatories, datum.owner),
+      and {
+        key_signed(tx.extra_signatories, datum.beneficiary),
+      },
     }
   }
 
