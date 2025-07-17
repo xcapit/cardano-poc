@@ -42,7 +42,7 @@ fn vesting_datum() {
 test vesting_owner() {
   let datum = Some(vesting_datum())
   let tx =
-    when datum_opt is {
+    when datum is {
       Some(datum) ->
         transaction.Transaction {
           ..transaction.placeholder,
