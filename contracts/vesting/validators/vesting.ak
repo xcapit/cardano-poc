@@ -19,9 +19,9 @@ validator vesting {
   ) {
     expect Some(datum) = datum_opt
     or {
-      key_signed(tx.extra_signatories, datum.owner),
+      key_signed(tx.extra_signatories, datum.owner?),
       and {
-        key_signed(tx.extra_signatories, datum.beneficiary),
+        key_signed(tx.extra_signatories, datum.beneficiary?),
         valid_after(tx.validity_range, datum.lock_until),
       },
     }
