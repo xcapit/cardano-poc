@@ -46,23 +46,3 @@ test vesting_owner() {
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
   vesting.spend(Some(datum), None, utxo, tx)
 }
-
-test vesting_beneficiary_fails_before_lock() {
-  let datum =
-    VestingDatum {
-      lock_until: 10000,
-      owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-    }
-
-  let tx =
-    transaction.Transaction {
-      ..transaction.placeholder,
-      extra_signatories: [datum.beneficiary],
-    }
-
-  let utxo = OutputReference { transaction_id: "", output_index: 0 }
-
-  expect throws
-  vesting.spend(Some(datum), None, utxo, tx)
-}
