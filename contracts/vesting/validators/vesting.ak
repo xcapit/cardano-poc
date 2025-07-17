@@ -60,7 +60,7 @@ test vesting_beneficiary() {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
       validity_range: Interval {
-        lower: Some(datum.lock_until + 1 as PosixTime), // Cast Int to PosixTime
+        lower: Some(datum.lock_until + 1 as PosixTime),
         upper: None,
       },
     }
