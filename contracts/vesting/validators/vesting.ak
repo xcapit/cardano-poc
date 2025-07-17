@@ -14,7 +14,7 @@ validator vesting {
     _utxo: OutputReference,
     tx: Transaction,
   ) {
-    expect Some(datum) = datum_opt
+    expect Some(datum) = datum
   }
 
   else(_) {
