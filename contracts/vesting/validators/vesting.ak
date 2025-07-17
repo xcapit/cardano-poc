@@ -51,3 +51,9 @@ test vesting_owner() {
     }
   vesting.spend(Some(datum), None, utxo, tx)
 }
+
+type TestCase {
+  is_owner_signed: Bool,
+  is_beneficiary_signed: Bool,
+  is_lock_time_passed: Bool,
+}
