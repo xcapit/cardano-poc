@@ -37,3 +37,12 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 type TestCase {
   is_pair_token_amount: Bool,
 }
+
+fn get_test_tx(test_case: TestCase) {
+  let TestCase { is_pair_token_amount } = test_case
+  mocktail_tx()
+    |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
+    |> required_signer_hash(is_beneficiary_signed, mock_pub_key_hash(2))
+    |> invalid_before(is_lock_time_passed, 10001)
+    |> complete()
+}
