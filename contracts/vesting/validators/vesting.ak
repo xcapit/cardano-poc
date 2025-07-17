@@ -46,3 +46,19 @@ test vesting_owner() {
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
   vesting.spend(Some(datum), None, utxo, tx)
 }
+
+test vesting_owner() {
+  let datum =
+    VestingDatum {
+      lock_until: 10000,
+      owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    }
+  let tx =
+    transaction.Transaction {
+      ..transaction.placeholder,
+      extra_signatories: [datum.owner],
+    }
+  let utxo = OutputReference { transaction_id: "", output_index: 0 }
+  vesting.spend(Some(datum), None, utxo, tx)
+}
