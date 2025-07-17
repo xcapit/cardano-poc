@@ -32,5 +32,6 @@ validator vesting {
 }
 
 test vesting_owner() {
-  todo
+  let datum = None
+  vesting.spend()
 }
