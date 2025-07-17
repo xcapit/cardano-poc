@@ -1,6 +1,6 @@
 use aiken/collection/dict
 use cardano/assets.{PolicyId}
-use cardano/transaction.{OutputReference, Transaction} as tx
+use cardano/transaction.{OutputReference, Transaction}
 use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
 
 type Action {
