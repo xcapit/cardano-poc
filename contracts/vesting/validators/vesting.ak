@@ -7,7 +7,7 @@ validator vesting {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
-    todo @"spend logic goes here"
+    True
   }
 
   else(_) {
