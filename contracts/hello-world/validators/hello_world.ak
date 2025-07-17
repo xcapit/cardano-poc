@@ -48,8 +48,7 @@ test hello() {
 }
 
 type TestCase {
-  is_owner_signed: Bool,
-  is_msg_say_hello: Bool,
+  is_owner_signed: Bool
 }
 
 fn get_test_tx(test_case: TestCase) {
