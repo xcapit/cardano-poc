@@ -34,6 +34,7 @@ validator hello_world {
   }
 }
 
+// without mocktail
 test hello() {
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
