@@ -1,5 +1,6 @@
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
+use vodka_extra_signatories.{key_signed}
 
 pub type VestingDatum {
   lock_until: Int,
@@ -15,6 +16,9 @@ validator vesting {
     tx: Transaction,
   ) {
     expect Some(datum) = datum_opt
+    or {
+      key_signed,
+    }
   }
 
   else(_) {
