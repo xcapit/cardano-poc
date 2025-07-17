@@ -58,6 +58,7 @@ test vesting_beneficiary() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
+      validity_range: { start: Some(10001), end: None },
     }
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
   vesting.spend(Some(datum), None, utxo, tx)
