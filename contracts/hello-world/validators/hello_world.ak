@@ -58,3 +58,8 @@ fn get_test_tx(test_case: TestCase) {
     |> complete()
   }
 }
+
+test hello_mocktail(){
+  let out_ref = mock_utxo_ref(0,0)
+  let test_case = TestCase { is_owner_signed : True}
+}
