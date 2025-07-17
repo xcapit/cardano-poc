@@ -48,23 +48,22 @@ test hello() {
 }
 
 type TestCase {
-  is_owner_signed: Bool
+  is_owner_signed: Bool,
 }
 
 fn get_test_tx(test_case: TestCase) {
   let TestCase { is_owner_signed } = test_case
-  mocktail_tx(){
-    |> required_signer_hash(is_owner_signed,mock_pub_hash(1))
+  mocktail_tx()
+    |> required_signer_hash(is_owner_signed, mock_pub_hash(1))
     |> complete()
-  }
 }
 
-test hello_mocktail(){
-  let out_ref = mock_utxo_ref(0,0)
+test hello_mocktail() {
+  let out_ref = mock_utxo_ref(0, 0)
   let redeemer = Redeemer { msg: "Hello, World!" }
-  let test_case = TestCase { is_owner_signed : True}
+  let test_case = TestCase { is_owner_signed: True }
   let tx = get_test_tx(test_case)
   let datum =
     Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
-  hello_world.spend(datum,redeemer,out_ref,tx)
+  hello_world.spend(datum, redeemer, out_ref, tx)
 }
