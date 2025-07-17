@@ -1,3 +1,4 @@
+use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
 
 pub type VestingDatum {
