@@ -44,5 +44,5 @@ test vesting_owner() {
       extra_signatories: [datum.owner],
     }
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
-  vesting.spend(datum, None, utxo, tx)
+  vesting.spend(Some(datum), None, utxo, tx)
 }
