@@ -1,0 +1,46 @@
+{
+  "preamble": {
+    "title": "xcapit/vesting",
+    "description": "Aiken contracts for project 'xcapit/vesting'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.17+c3a7fba"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "vesting.vesting.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "585b01010029800aba2aba1aab9eaab9dab9a4888896600264653001300600198031803800cc0180092225980099b8748008c01cdd500144c8cc898c028004c028c02c004c020dd50014590060c018004c00cdd5003452689b2b200201",
+      "hash": "fc20070d1e5379403add6acbf77b233b2f8240821c187b398525de28"
+    },
+    {
+      "title": "vesting.vesting.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "585b01010029800aba2aba1aab9eaab9dab9a4888896600264653001300600198031803800cc0180092225980099b8748008c01cdd500144c8cc898c028004c028c02c004c020dd50014590060c018004c00cdd5003452689b2b200201",
+      "hash": "fc20070d1e5379403add6acbf77b233b2f8240821c187b398525de28"
+    }
+  ],
+  "definitions": {
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    }
+  }
+}
