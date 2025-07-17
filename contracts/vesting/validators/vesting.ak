@@ -1,5 +1,5 @@
 use aiken/crypto.{VerificationKeyHash}
-use cardano/transaction.{OutputReference, Transaction, ValidityRange}
+use cardano/transaction.{OutputReference, Transaction}
 use vodka_extra_signatories.{key_signed}
 use vodka_validity_range.{valid_after}
 
