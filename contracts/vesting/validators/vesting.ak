@@ -57,3 +57,11 @@ type TestCase {
   is_beneficiary_signed: Bool,
   is_lock_time_passed: Bool,
 }
+
+fn get_test_tx(test_case: TestCase) {
+  let TestCase { is_owner_signed, is_beneficiary_signed, is_lock_time_passed } =
+    test_case
+  mocktail_tx()
+    |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
+    |> complete()
+}
