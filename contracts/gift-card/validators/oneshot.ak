@@ -25,7 +25,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
           list.any(inputs, fn(input) { input.output_reference == utxo_ref })
         amount == 1 && asset_name == token_name
       }
-      CheckBurn -> todo @"burn"
+      CheckBurn -> amount == -1 && asset_name == token_name
     }
   }
 
