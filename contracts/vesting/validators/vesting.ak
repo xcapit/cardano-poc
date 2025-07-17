@@ -33,7 +33,7 @@ validator vesting {
 
 test vesting_owner() {
   let datum =
-    Datum {
+    VestingDatum {
       lock_until: 10000,
       owner: #"00000000000000000000000000000000000000000000000000000000",
       beneficiary: #"00000000000000000000000000000000000000000000000000000000",
