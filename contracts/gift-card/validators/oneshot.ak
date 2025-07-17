@@ -34,4 +34,7 @@ test check_mint() {
   let asset_name = b
   "GIFT"
   let amount = 1
+  let mint_dict =
+    dict.new()
+      |> dict.insert((policy_id, asset_name), amount)
 }
