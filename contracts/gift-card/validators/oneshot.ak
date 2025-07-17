@@ -20,7 +20,11 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
     when rdmr is {
-      CheckMint -> todo @"mint"
+      CheckMint -> {
+        expect
+          list.any(inputs, fn(input) { input.output_reference == utxo_ref })
+        amount == 1 && asset_name == token_name
+      }
       CheckBurn -> todo @"burn"
     }
   }
