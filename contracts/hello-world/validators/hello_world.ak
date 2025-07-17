@@ -46,5 +46,5 @@ test hello() {
 
 type TestCase {
   is_owner_signed: Bool,
-  is_msg_hello_world: bool,
+  is_say_hello_world: Bool,
 }
