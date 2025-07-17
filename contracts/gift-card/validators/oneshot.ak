@@ -31,7 +31,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 }
 
 test check_mint() {
-  let policy_id = mocktail.mock_policy_id(1)
+  let policy_id = mocktail.mock_pub_key_hash(1)
   let asset_name = b
   "GIFT"
   let amount = 1
