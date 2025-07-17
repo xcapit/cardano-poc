@@ -59,6 +59,7 @@ fn get_test_tx(test_case: TestCase) {
     |> complete()
 }
 
+// with mocktail
 test hello_mocktail() {
   let out_ref = mock_utxo_ref(0, 0)
   let redeemer = Redeemer { msg: "Hello, World!" }
