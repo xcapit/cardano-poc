@@ -33,3 +33,5 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
     fail
   }
 }
+
+type TestCase {TestCase}
