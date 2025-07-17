@@ -48,3 +48,7 @@ type TestCase {
   is_owner_signed: Bool,
   is_msg_say_hello: Bool,
 }
+
+fn get_test_tx(test_case: TestCase) {
+  let TestCase { is_owner_signed, is_msg_say_hello } = test_case
+}
