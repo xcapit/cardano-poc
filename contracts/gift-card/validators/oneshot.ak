@@ -34,14 +34,11 @@ test check_mint() {
   let policy_id = mock_policy_id(1)
   let asset_name = "GIFT"
   let amount = 1
-  let mint_dict =
-    dict.new()
-      |> dict.insert((policy_id, asset_name), amount)
 
   let tx =
     mocktail.mocktail_tx()
       |> mocktail.with_mint(mint_dict)
-      |> mocktail.complete()
+      |> complete()
 
   // Ejecutamos el validador con CheckMint
   gift_card.mint(CheckMint, policy_id, tx)
