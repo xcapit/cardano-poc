@@ -36,7 +36,10 @@ test check_mint() {
   let amount = 1
 
   let tx =
-    transaction.Transaction { ..transaction.placeholder, extra_signatories: [] }
+    transaction.Transaction {
+      ..transaction.placeholder,
+      extra_signatories: [mock_pub_key_hash(1)],
+    }
 
   // Ejecutamos el validador con CheckMint
   gift_card.mint(CheckMint, policy_id, tx)
