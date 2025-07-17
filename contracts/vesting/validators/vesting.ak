@@ -1,3 +1,4 @@
+use aiken/builtin.{Interval, PosixTime}
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction, ValidityRange}
 use vodka_extra_signatories.{key_signed}
