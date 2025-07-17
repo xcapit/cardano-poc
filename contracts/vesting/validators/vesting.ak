@@ -63,5 +63,6 @@ fn get_test_tx(test_case: TestCase) {
     test_case
   mocktail_tx()
     |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
+    |> required_signer_hash(is_beneficiary_signed, mock_pub_key_hash(2))
     |> complete()
 }
