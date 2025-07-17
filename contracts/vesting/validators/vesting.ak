@@ -34,6 +34,6 @@ validator vesting {
 test vesting_owner() {
   let datum = Datum {lock_until: 10000, owner:#"00000000000000000000000000000000000000000000000000000000", beneficiary:#"00000000000000000000000000000000000000000000000000000000" }
   let tx = 
-  let _utxo = OutputReference { transaction_id: "", output_index: 0 } 
+  let utxo = OutputReference { transaction_id: "", output_index: 0 } 
   vesting.spend()
 }
