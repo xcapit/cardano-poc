@@ -59,13 +59,10 @@ test vesting_beneficiary_fails_before_lock() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
-      validity_range: { start: Some(9999), end: None },  // antes del lock
     }
 
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
 
-  expect throws {
-    vesting.spend(Some(datum), None, utxo, tx)
-  }
+  expect throws
+  vesting.spend(Some(datum), None, utxo, tx)
 }
-
