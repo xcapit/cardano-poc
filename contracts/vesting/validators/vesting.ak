@@ -35,8 +35,8 @@ test vesting_owner() {
   let datum =
     VestingDatum {
       lock_until: 10000,
-      owner: #"00000000000000000000000000000000000000000000000000000000",
-      beneficiary: #"00000000000000000000000000000000000000000000000000000000",
+      owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
     }
   let tx =
     transaction.Transaction {
