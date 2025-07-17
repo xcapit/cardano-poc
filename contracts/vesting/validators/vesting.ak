@@ -1,5 +1,5 @@
 use aiken/crypto.{VerificationKeyHash}
-use cardano/transaction.{OutputReference, Transaction}
+use cardano/transaction.{OutputReference, Transaction, ValidityRange}
 use vodka_extra_signatories.{key_signed}
 use vodka_validity_range.{valid_after}
 
@@ -58,7 +58,6 @@ test vesting_beneficiary() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [datum.beneficiary],
-      validity_range: { start: Some(10001), end: None },
     }
   let utxo = OutputReference { transaction_id: "", output_index: 0 }
   vesting.spend(Some(datum), None, utxo, tx)
