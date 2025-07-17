@@ -8,7 +8,7 @@ pub type VestingDatum {
 
 validator vesting {
   spend(
-    _datum: Option<Data>,
+    _datum: Option<VestingDatum>,
     _redeemer: Data,
     _utxo: OutputReference,
     _self: Transaction,
