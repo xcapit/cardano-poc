@@ -1,7 +1,7 @@
 use aiken/collection/dict
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction} as tx
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail/virgin_key_hash.{mock_pub_key_hash}
 
 type Action {
   CheckMint
