@@ -40,12 +40,7 @@ fn vesting_datum() {
 }
 
 test vesting_owner() {
-  let datum =
-    VestingDatum {
-      lock_until: 10000,
-      owner: #"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      beneficiary: #"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-    }
+  let datum = Some(vesting_datum())
   let tx =
     transaction.Transaction {
       ..transaction.placeholder,
