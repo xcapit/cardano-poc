@@ -66,7 +66,7 @@ fn get_test_tx(test_case: TestCase) {
   mocktail_tx()
     |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
     |> required_signer_hash(is_beneficiary_signed, mock_pub_key_hash(2))
-    |> invalid_before(10001)
+    |> invalid_before(is_lock_time_passed, 10001)
     |> complete()
 }
 
