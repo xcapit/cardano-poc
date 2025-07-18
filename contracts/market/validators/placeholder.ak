@@ -35,7 +35,9 @@ validator placeholder {
         //payment value is correct
         assets.lovelace_of(payment.value) == d.price
       }
-      MEdit { price } -> True
+      MEdit { price } -> {
+        expect Some(own_input) = list.find(tx.inputs, fn(input){})
+      }
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
   }
