@@ -11,7 +11,8 @@ type MarketDatum {
 
 type MarketAction {
   MBuy,
-  MEdit {price: Int}
+  MEdit {price: Int},
+  MdDelist
 }
 
 
