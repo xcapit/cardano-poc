@@ -86,3 +86,24 @@ fn get_test_tx(test_case: TestCase, own_ref: OutputReference, utxo_ref: OutputRe
     ..mocktail_tx()
   }
 }
+test check_mint_passes {
+  let token_name = #68656c6c6f  // "hello"
+  let policy_id = mock_policy_id()
+  let own_ref = mock_output_ref(0)
+  let utxo_ref = mock_output_ref(1)
+
+  let tx = get_test_tx(
+    TestCase {
+      action: CheckMint,
+      token_name,
+      policy_id,
+      mint_amount: 1,
+      has_utxo_ref_input: True,
+      has_own_ref_input: False  // not needed in `mint`
+    },
+    own_ref,
+    utxo_ref
+  )
+
+  gift_card(token_name, utxo_ref).mint(CheckMint, policy_id, tx)
+}
