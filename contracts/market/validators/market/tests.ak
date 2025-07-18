@@ -41,7 +41,7 @@ test buy() {
                     stake_credential: None,
                 },
                 value: assets.from_lovelace(600),
-                datum: marketDatum,
+                datum: NoDatum,
                 reference_script: None,
             }
 
