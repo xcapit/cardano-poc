@@ -9,6 +9,12 @@ type MarketDatum {
   seller: ByteArray,
 }
 
+type MarketAction {
+  MBuy,
+  MEdit {price: Int}
+}
+
+
 validator placeholder {
   mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
     todo @"mint logic goes here"
