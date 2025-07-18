@@ -9,9 +9,9 @@ pub type Action {
 }
 
 validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
-  // spend(_d, _r, own_ref: OutputReference, transaction: Transaction) {
-  //   let Transaction { inputs, mint, .. } = transaction
-  // }
+  spend(_d, _r, own_ref: OutputReference, transaction: Transaction) {
+    let Transaction { inputs, mint, .. } = transaction
+  }
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
     let Transaction { inputs, mint, .. } = transaction
