@@ -1,5 +1,5 @@
 use market/market
 
 test buy() {
-  market.market.spend()
+  market.market.spend(marketDatum, marketAction, oref, ts]x)
 }
