@@ -17,7 +17,7 @@ test buy() {
   let marketValue =
     assets.merge(
       assets.from_lovelace(600),
-      assets.from_asset(mock_policy_id(1), #"deef", 1),
+      assets.from_asset(mock_policy_id(1), mock_pub_key_hash(3), 1),
     )
 
   let oref = mock_utxo_ref(0, 0)
