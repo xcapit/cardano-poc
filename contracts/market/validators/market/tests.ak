@@ -59,7 +59,7 @@ test buy() {
     let sellerOut = 
         Output {
             address: Address {
-                    payment_credential: mock_pub_key_hash(2),
+                    payment_credential: mock_pub_key_hash(1),
                     stake_credential: None,
                 },
             value: marketValue,
