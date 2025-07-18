@@ -11,6 +11,8 @@ pub type Action {
 validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
   spend(_d, _r, own_ref: OutputReference, transaction: Transaction) {
     let Transaction { inputs, mint, .. } = transaction
+    expect Some(own_input) =
+      list.find(inputs, fn(input) { input.output_reference == own_ref })
   }
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
