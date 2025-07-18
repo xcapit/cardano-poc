@@ -57,7 +57,7 @@ test buy() {
         stake_credential: None,
       },
       value: marketValue,
-      datum: None,
+      datum: NoDatum,
       reference_script: None,
     }
   let sellerOut =
