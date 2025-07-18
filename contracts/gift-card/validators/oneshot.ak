@@ -42,10 +42,15 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
     fail
   }
 }
-// type TestCase {
-//   is_pair_token_amount: Bool,
-// }
 
+type TestCase {
+  action: Action,
+  token_name: ByteArray,
+  policy_id: PolicyId,
+  mint_amount: Int,
+  has_utxo_ref_input: Bool,
+  has_own_ref_input: Bool,
+}
 // fn get_test_tx(test_case: TestCase) {
 //   let TestCase { is_pair_token_amount } = test_case
 //   mocktail_tx()
