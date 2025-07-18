@@ -1,79 +1,77 @@
-use market/market
-use mocktail/virgin_output_reference.{mock_utxo_ref}
-use mocktail/virgin_key_hash.{mock_pub_key_hash,mock_policy_id}
-use cardano/transaction.{OutputReference, Transaction, Input, Output, NoDatum,placeholder}
 use cardano/address.{Address}
+use cardano/transaction.{
+  Input, NoDatum, Output, OutputReference, Transaction, placeholder,
+}
+use market/market
+use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
+use mocktail/virgin_output_reference.{mock_utxo_ref}
 
+test buy() {
+  let seller = mock_pub_key_hash(1)
+  let buyer = mock_pub_key_hash(2)
 
-test buy() { 
-    let seller = mock_pub_key_hash(1)
-    let buyer = mock_pub_key_hash(2)
+  let marketDatum = MarketDatum { price: 200, seller }
+  let marketAction = MBuy
 
-    let marketDatum = MarketDatum { price: 200, seller: seller}
-    let marketAction = MBuy
-
-    let marketValue = assets.merge(
-        assets.from_lovelace(600),
-        assets.from_asset(mock_policy_id(1),#"test",1)
+  let marketValue =
+    assets.merge(
+      assets.from_lovelace(600),
+      assets.from_asset(mock_policy_id(1), #"deef", 1),
     )
 
-    let oref = mock_utxo_ref(0, 0)
+  let oref = mock_utxo_ref(0, 0)
 
-    let marketInput =
-        Input {
-            output_reference: oref,
-            output: Output {
-                address: Address {
-                    payment_credential: #"deef",
-                    stake_credential: None,
-                },
-                value: marketValue,
-                datum: marketDatum,
-                reference_script: None,
-            }
+  let marketInput =
+    Input {
+      output_reference: oref,
+      output: Output {
+        address: Address { payment_credential: #"deef", stake_credential: None },
+        value: marketValue,
+        datum: marketDatum,
+        reference_script: None,
+      },
+    }
 
-        }
+  let buyerIn =
+    Input {
+      output_reference: oref,
+      output: Output {
+        address: Address {
+          payment_credential: mock_pub_key_hash(2),
+          stake_credential: None,
+        },
+        value: assets.from_lovelace(600),
+        datum: NoDatum,
+        reference_script: None,
+      },
+    }
 
-    let buyerIn = 
-        Input {
-            output_reference: oref,
-            output: Output {
-                address: Address {
-                    payment_credential: mock_pub_key_hash(2),
-                    stake_credential: None,
-                },
-                value: assets.from_lovelace(600),
-                datum: NoDatum,
-                reference_script: None,
-            }
+  let buyerOut =
+    Output {
+      address: Address {
+        payment_credential: mock_pub_key_hash(2),
+        stake_credential: None,
+      },
+      value: marketValue,
+      datum: None,
+      reference_script: None,
+    }
+  let sellerOut =
+    Output {
+      address: Address {
+        payment_credential: mock_pub_key_hash(1),
+        stake_credential: None,
+      },
+      value: assets.from_lovelace(600),
+      datum: NoDatum,
+      reference_script: None,
+    }
 
-        }
-    let buyerOut = 
-        Output {
-            address: Address {
-                    payment_credential: mock_pub_key_hash(2),
-                    stake_credential: None,
-                },
-            value: marketValue,
-            datum: None,
-            reference_script: None,
-        }
-    let sellerOut = 
-        Output {
-            address: Address {
-                    payment_credential: mock_pub_key_hash(1),
-                    stake_credential: None,
-                },
-            value: assets.from_lovelace(600),
-            datum: NoDatum,
-            reference_script: None,
-        }
-
-    let tx = 
-        Transaction {
-            .. placeholder,
-            inputs: [buyerIn, marketIn],
-            output: [buyerOut, sellerOut]
-        }
-    market.market.spend(marketDatum, marketAction, oref, tx)
+  let tx =
+    Transaction {
+      ..placeholder,
+      inputs: [buyerIn, marketIn],
+      output: [buyerOut, sellerOut],
+    }
+  market.market.spend(marketDatum, marketAction, oref, tx)
 }
