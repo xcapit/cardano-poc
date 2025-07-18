@@ -47,7 +47,7 @@ test buy() {
 
         }
     let buyerOut = 
-        Input {
+        Output {
             output_reference: oref,
             output: Output {
                 address: Address {
