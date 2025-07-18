@@ -8,6 +8,7 @@ test buy() {
     let buyer = mock_pub_key_hash(2)
 
     let marketDatum = MarketDatum { price: 200, seller: seller}
+    let marketAction = MBuy
 
     let oref = mock_utxo_ref(0, 0)
     tx = Transaction {
