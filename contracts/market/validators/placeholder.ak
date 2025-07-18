@@ -1,4 +1,3 @@
-use 
 use aiken/collection/list
 use cardano/address.{VerificationKey}
 use cardano/assets
