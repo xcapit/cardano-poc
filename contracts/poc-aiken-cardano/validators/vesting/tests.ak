@@ -50,5 +50,5 @@ test vesting_owner_mocktail() {
     }
   let out_ref = mock_utxo_ref(0, 0)
   let tx = get_test_tx(test_case)
-  vesting.spend(datum, Void, out_ref, tx)
+  vesting.vesting.spend(datum, Void, out_ref, tx)
 }
