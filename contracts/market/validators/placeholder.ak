@@ -10,11 +10,10 @@ type MarketDatum {
 }
 
 type MarketAction {
-  MBuy,
-  MEdit {price: Int},
+  MBuy
+  MEdit { price: Int }
   MDelist
 }
-
 
 validator placeholder {
   mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
@@ -29,7 +28,7 @@ validator placeholder {
   ) {
     when redeemer is {
       MBuy -> True
-      MEdit {price} -> True
+      MEdit { price } -> True
       MDelist -> True
     }
   }
