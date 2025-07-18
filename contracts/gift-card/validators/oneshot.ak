@@ -1,5 +1,6 @@
 use aiken/collection/dict
 use aiken/collection/list
+use cardano/address.{Script}
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction}
 
