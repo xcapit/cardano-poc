@@ -45,12 +45,25 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
   }
 }
 
-test mint() {
-  let tx =
-    transaction.Transaction {
-      ..transaction.placeholder,
-      extra_signatories: [mock_pub_key_hash(1)],
-      mint: ["a", 2],
-    }
-  gift_card.mint("T", mock_utxo_ref(0, 0), CheckMint, "", tx)
+test mint_check_mint_valid_token() {
+  let token_name = #61  // "a" en hex
+  let policy_id = ""
+  let utxo_ref = mock_utxo_ref(0, 0)
+
+  let mint_map =
+    dict.new()
+      |> dict.insert(token_name, 2)
+
+  let tx = transaction.Transaction {
+    ..transaction.placeholder,
+    inputs: [
+      // necesario para que el CheckMint pase (requiere que utxo_ref esté presente)
+      transaction.input(mock_utxo_ref(0, 0), transaction.output(transaction.mock_address, value.zero))
+    ],
+    mint: dict.insert(policy_id, mint_map, dict.new()),
+    extra_signatories: [mock_pub_key_hash(1)],
+  }
+
+  gift_card(token_name, utxo_ref).mint(CheckMint, policy_id, tx)
 }
+
