@@ -21,7 +21,9 @@ test buy() {
         Input {
             output_reference: oref,
             output: Output {
-                address: ,
+                address: Address {
+                    payment_credential: mock_pub_key_hash(1),
+                },
                 value: marketValue,
                 datum: marketDatum,
                 reference_script: None,
