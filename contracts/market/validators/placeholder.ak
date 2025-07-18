@@ -28,7 +28,8 @@ validator placeholder {
     _self: Transaction,
   ) {
     when redeemer is {
-      MBuy ->
+      MBuy -> True,
+      MEdit -> True,
     }
   }
 
