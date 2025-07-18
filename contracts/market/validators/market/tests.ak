@@ -22,7 +22,7 @@ test buy() {
 
   let oref = mock_utxo_ref(0, 0)
 
-  let marketInput =
+  let marketIn =
     Input {
       output_reference: oref,
       output: Output {
