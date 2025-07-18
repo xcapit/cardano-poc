@@ -1,6 +1,6 @@
 use cardano/assets.{PolicyId}
-use cardano/transaction.{OutputReference, Transaction}
 use cardano/collection/list
+use cardano/transaction.{OutputReference, Transaction}
 
 pub type MarketDatum {
   price: Int,
@@ -22,12 +22,16 @@ validator placeholder {
     datum: Option<MarketDatum>,
     redeemer: MarketAction,
     _utxo: OutputReference,
-    _self: Transaction,
+    self: Transaction,
   ) {
     when redeemer is {
       MBuy -> True
       MEdit { price } -> True
-      MDelist -> {}
+      MDelist -> list.has(tx)
     }
+  }
+
+  else(_) {
+    fail
   }
 }
