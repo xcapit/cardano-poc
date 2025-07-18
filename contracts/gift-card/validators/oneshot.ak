@@ -26,7 +26,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
     let Transaction { inputs, mint, .. } = transaction
-    expect [Pair(asset_name, amount)] =
+    expect [Pair(asset_name?, amount)] =
       mint
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
