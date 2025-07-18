@@ -9,7 +9,7 @@ type MarketDatum {
   seller: ByteArray,
 }
 
-type MarketAction {
+pub type MarketAction {
   MBuy
   MEdit { price: Int }
   MDelist
