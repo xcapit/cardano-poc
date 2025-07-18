@@ -27,7 +27,11 @@ validator placeholder {
     expect Some(d) = datum
     when redeemer is {
       MBuy -> {
-        expect Some(payment)
+        expect Some(payment) =
+          list.find(
+            tx.outputs,
+            fn(output) { output.address.payment_credential },
+          )
       }
       MEdit { price } -> True
       MDelist -> list.has(tx.extra_signatories, d.seller)
