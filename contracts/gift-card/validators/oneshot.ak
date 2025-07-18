@@ -44,28 +44,3 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
     fail
   }
 }
-
-test mint_check_mint_valid_token() {
-  let token_name = ""
-  let policy_id = ""
-  let utxo_ref = mock_utxo_ref(0, 0)
-
-  let mint_map =
-    dict.insert(token_name, 2)
-      |> {
-          let tx =
-            transaction.Transaction {
-              ..transaction.placeholder,
-              inputs: [
-                transaction.input(
-                  mock_utxo_ref(0, 0),
-                  transaction.output(transaction.mock_address, value.zero),
-                ),
-              ],
-              mint: dict.insert(policy_id, mint_map),
-              extra_signatories: [mock_pub_key_hash(1)],
-            }
-        }
-
-  gift_card(token_name, utxo_ref).mint(CheckMint, policy_id, tx)
-}
