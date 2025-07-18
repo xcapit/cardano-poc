@@ -1,8 +1,6 @@
 use cardano/address.{Address, VerificationKey}
 use cardano/assets
-use cardano/transaction.{
-  InlineDatum, Input, NoDatum, Output, Transaction, placeholder,
-}
+use cardano/transaction.{InlineDatum, Input, NoDatum, Output, Transaction}
 use market/market.{MBuy, MarketDatum}
 use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
