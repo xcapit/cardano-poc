@@ -14,7 +14,7 @@ pub type MarketAction {
   MDelist
 }
 
-validator placeholder {
+validator market {
   spend(
     datum: Option<MarketDatum>,
     redeemer: MarketAction,
