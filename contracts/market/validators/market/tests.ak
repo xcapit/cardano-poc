@@ -1,4 +1,6 @@
 use market/market
+use mocktail/virgin_output_reference.{mock_utxo_ref}
+
 
 test buy() { 
     let oref = mock_utxo_ref(0, 0)
