@@ -63,7 +63,7 @@ test buy() {
         payment_credential: VerificationKey(mock_pub_key_hash(1)),
         stake_credential: None,
       },
-      value: assets.from_lovelace(600),
+      value: assets.from_lovelace(200),
       datum: NoDatum,
       reference_script: None,
     }
