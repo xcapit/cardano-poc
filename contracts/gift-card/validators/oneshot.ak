@@ -51,7 +51,6 @@ test mint_check_mint_valid_token() {
   let utxo_ref = mock_utxo_ref(0, 0)
 
   let mint_map =
-    dict.new()
       |> dict.insert(token_name, 2)
 
   let tx =
