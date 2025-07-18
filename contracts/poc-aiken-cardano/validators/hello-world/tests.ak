@@ -1,3 +1,5 @@
+use cardano/transaction.{OutputReference, Transaction}
+
 // without mocktail
 test hello() {
   let datum =
