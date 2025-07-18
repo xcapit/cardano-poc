@@ -73,5 +73,5 @@ test buy() {
       inputs: [buyerIn, marketIn],
       output: [buyerOut, sellerOut],
     }
-  market.market.spend(marketDatum, marketAction, oref, tx)
+  market.market.spend(Some(marketDatum), marketAction, oref, tx)
 }
