@@ -8,10 +8,8 @@ use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
 
 test buy() {
-  let seller = mock_pub_key_hash(1)
-  let buyer = mock_pub_key_hash(2)
 
-  let marketDatum = MarketDatum { price: 200, seller }
+  let marketDatum = MarketDatum { price: 200, mock_pub_key_hash(1) }
   let marketAction = MBuy
 
   let marketValue =
