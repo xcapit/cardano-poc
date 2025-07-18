@@ -27,6 +27,7 @@ validator placeholder {
     expect Some(d) = datum
     when redeemer is {
       MBuy -> {
+        //output to seller address
         expect Some(payment) =
           list.find(
             tx.outputs,
