@@ -26,7 +26,9 @@ validator placeholder {
   ) {
     expect Some(d) = datum
     when redeemer is {
-      MBuy -> True
+      MBuy -> {
+        expect Some(payment)
+      }
       MEdit { price } -> True
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
