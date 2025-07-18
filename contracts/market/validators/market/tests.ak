@@ -52,11 +52,11 @@ test buy() {
                     payment_credential: mock_pub_key_hash(2),
                     stake_credential: None,
                 },
-            value: assets.from_lovelace(600),
-            datum: NoDatum,
+            value: marketValue,
+            datum: None,
             reference_script: None,
         }
-        
+
     tx = 
         Transaction {
             .. placeholder,
