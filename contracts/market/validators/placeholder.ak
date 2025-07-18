@@ -45,9 +45,9 @@ validator placeholder {
         expect InlineDatum(datum) = own_output.datum
         expect newDatum : MarketDatum = datum
         and {
-          newDatum.seller == d.seller 
-          newDatum.price == price
-          list.has(tx.extra_signatories, d.seller)
+          newDatum.seller == d.seller,
+          newDatum.price == price,
+          list.has(tx.extra_signatories, d.seller),
         }
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
