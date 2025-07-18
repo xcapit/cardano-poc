@@ -30,7 +30,7 @@ validator placeholder {
     when redeemer is {
       MBuy -> True,
       MEdit -> True,
-      MDelist
+      MDelist -> True
     }
   }
 
