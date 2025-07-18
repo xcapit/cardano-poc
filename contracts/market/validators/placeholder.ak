@@ -3,6 +3,7 @@ use cardano/assets.{PolicyId}
 use cardano/certificate.{Certificate}
 use cardano/governance.{ProposalProcedure, Voter}
 use cardano/transaction.{OutputReference, Transaction}
+use cardano/collection/list
 
 pub type MarketDatum {
   price: Int,
@@ -29,7 +30,7 @@ validator placeholder {
     when redeemer is {
       MBuy -> True
       MEdit { price } -> True
-      MDelist -> True
+      MDelist -> {}
     }
   }
 
