@@ -34,7 +34,7 @@ validator placeholder {
               output.address.payment_credential == VerificationKey(d.seller)
             },
           )
-        assets.lovelace_of(payment.value)
+        assets.lovelace_of(payment.value) == d.price
       }
       MEdit { price } -> True
       MDelist -> list.has(tx.extra_signatories, d.seller)
