@@ -1,6 +1,5 @@
 use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
-use mocktail.{complete, invalid_before, mocktail_tx, required_signer_hash}
 use vodka_extra_signatories.{key_signed}
 use vodka_validity_range.{valid_after}
 
