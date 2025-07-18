@@ -75,7 +75,7 @@ test buy() {
     Transaction {
       ..placeholder,
       inputs: [buyerIn, marketIn],
-      output: [buyerOut, sellerOut],
+      outputs: [buyerOut, sellerOut],
     }
   market.market.spend(Some(marketDatum), marketAction, oref, tx)
 }
