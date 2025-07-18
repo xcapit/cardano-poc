@@ -21,7 +21,7 @@ test vesting_owner() {
       ..transaction.placeholder,
       extra_signatories: [datum.owner],
     }
-  vesting.spend(Some(datum), None, utxo, tx)
+  vesting.vesting.spend(Some(datum), None, utxo, tx)
 }
 
 type TestCase {
