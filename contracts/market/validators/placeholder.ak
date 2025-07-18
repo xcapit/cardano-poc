@@ -4,7 +4,7 @@ use cardano/certificate.{Certificate}
 use cardano/governance.{ProposalProcedure, Voter}
 use cardano/transaction.{OutputReference, Transaction}
 
-type MarketDatum {
+pub type MarketDatum {
   price: Int,
   seller: ByteArray,
 }
