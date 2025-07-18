@@ -40,6 +40,7 @@ validator placeholder {
         // es decir quitamos el activo del market, y volvemos a introducirlo al market
         expect Some(own_input) = list.find(tx.inputs, fn(input){ input.output_reference = utxo })
         let own_hash = own_input.output.address.payment_credential
+        // script output has same value as input
         expect Some(own_output) = list.find(tx.outputs, fn(output){ output.address.payment_credential == own_hash && output.value == own_input.output.value })
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
