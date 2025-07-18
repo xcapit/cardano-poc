@@ -1,5 +1,6 @@
 use mocktail/virgin_key_hash.{mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
+use vesting/vesting.{VestingDatum}
 
 fn vesting_datum() {
   VestingDatum {
