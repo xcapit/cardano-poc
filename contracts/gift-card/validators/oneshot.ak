@@ -3,6 +3,8 @@ use aiken/collection/list
 use cardano/address.{Script}
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction}
+use mocktail/virgin_key_hash.{mock_pub_key_hash}
+use mocktail/virgin_output_reference.{mock_utxo_ref}
 
 pub type Action {
   CheckMint
@@ -41,4 +43,13 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
   else(_) {
     fail
   }
+}
+
+test mint() {
+  let tx =
+    transaction.Transaction {
+      ..transaction.placeholder,
+      extra_signatories: [mock_pub_key_hash(1)],
+    }
+  gift_card.mint("T", mock_utxo_ref(0, 0), CheckMint, "", tx)
 }
