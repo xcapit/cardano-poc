@@ -1,4 +1,5 @@
 use cardano/transaction.{OutputReference, Transaction}
+use mocktail.{complete, mocktail_tx, required_signer_hash}
 
 // without mocktail
 test hello() {
