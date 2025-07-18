@@ -16,6 +16,12 @@ test buy() {
     )
 
     let oref = mock_utxo_ref(0, 0)
+
+    let marketInput =
+        Input {
+            output_reference: oref
+        }
+
     tx = 
         Transaction {
             .. placeholder,
