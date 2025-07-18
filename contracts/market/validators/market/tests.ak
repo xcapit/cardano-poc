@@ -22,8 +22,8 @@ test buy() {
             output_reference: oref,
             output: Output {
                 address: ,
-                value: ,
-                datum:,
+                value: marketValue,
+                datum: marketDatum,
                 reference_script: None,
             }
 
