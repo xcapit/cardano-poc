@@ -1,4 +1,5 @@
 use cardano/address.{Address}
+use cardano/assets
 use cardano/transaction.{
   InlineDatum, Input, NoDatum, Output, OutputReference, Transaction, placeholder,
 }
