@@ -1,4 +1,5 @@
 use aiken/collection/list
+use aiken/transaction/value.{lovelace_of}
 use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction}
 
