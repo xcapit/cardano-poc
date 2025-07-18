@@ -1,5 +1,5 @@
 use market/market
 
 test buy() {
-  true
+  True == True
 }
