@@ -13,6 +13,12 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
     let Transaction { inputs, mint, .. } = transaction
     expect Some(own_input) =
       list.find(inputs, fn(input) { input.output_reference == own_ref })
+    expect Script(policy_id) = own_input.output.address.payment_credential
+    expect [Pair(asset_name, amount)] =
+      mint
+        |> assets.tokens(policy_id)
+        |> dict.to_pairs()
+    amount == -1 && asset_name == token_name
   }
 
   mint(rdmr: Action, policy_id: PolicyId, transaction: Transaction) {
