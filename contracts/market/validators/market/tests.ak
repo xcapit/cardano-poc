@@ -69,7 +69,7 @@ test buy() {
             reference_script: None,
         }
 
-    tx = 
+    let tx = 
         Transaction {
             .. placeholder,
             inputs: [buyerIn, marketIn],
