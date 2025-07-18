@@ -1,7 +1,7 @@
 use aiken/collection/list
 use cardano/address.{VerificationKey}
 use cardano/assets
-use cardano/transaction.{OutputReference, Transaction}
+use cardano/transaction.{InlineDatum, OutputReference, Transaction}
 
 pub type MarketDatum {
   price: Int,
