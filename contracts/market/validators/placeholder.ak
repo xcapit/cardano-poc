@@ -27,7 +27,9 @@ validator placeholder {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
-    todo @"spend logic goes here"
+    when redeemer is {
+      MBuy ->
+    }
   }
 
   withdraw(_redeemer: Data, _account: Credential, _self: Transaction) {
