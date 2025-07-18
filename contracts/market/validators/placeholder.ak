@@ -39,6 +39,7 @@ validator placeholder {
         // (?) si editamos el precio, necesitamos gastar ese UTXO
         // es decir quitamos el activo del market, y volvemos a introducirlo al market
         expect Some(own_input) = list.find(tx.inputs, fn(input){ input.output_reference = utxo})
+        let own_hash = own_input.output.address.payment
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
