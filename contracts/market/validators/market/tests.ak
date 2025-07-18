@@ -1,6 +1,6 @@
 use market/market
 use mocktail/virgin_output_reference.{mock_utxo_ref}
-use mocktail/virgin_key_hash.{mock_pub_key_hash}
+use mocktail/virgin_key_hash.{mock_pub_key_hash,mock_policy_id}
 
 
 test buy() { 
@@ -12,6 +12,7 @@ test buy() {
 
     let marketValue = assets.merge(
         assets.from_lovelace(600),
+        assets.from_assets()
     )
 
     let oref = mock_utxo_ref(0, 0)
