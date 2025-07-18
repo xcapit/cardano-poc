@@ -1,5 +1,9 @@
 use market/market
 
-test buy() {
-  market.market.spend(marketDatum, marketAction, oref, tx)
+test buy() { 
+    tx = Transaction {
+        ..placeholder,
+
+    }
+    market.market.spend(marketDatum, marketAction, oref, tx)
 }
