@@ -7,7 +7,7 @@ test buy() {
     let seller = mock_pub_key_hash(1)
     let buyer = mock_pub_key_hash(2)
 
-    let marketDatum = MarketDatum {}
+    let marketDatum = MarketDatum { price: 200, seller: seller}
 
     let oref = mock_utxo_ref(0, 0)
     tx = Transaction {
