@@ -1,0 +1,34 @@
+// without mocktail
+test hello() {
+  let datum =
+    Datum { owner: #"00000000000000000000000000000000000000000000000000000000" }
+  let redeemer = Redeemer { msg: "Hello, World!" }
+  let placeholder_utxo = OutputReference { transaction_id: "", output_index: 0 }
+  let tx =
+    transaction.Transaction {
+      ..transaction.placeholder,
+      extra_signatories: [datum.owner],
+    }
+  hello_world.spend(Some(datum), redeemer, placeholder_utxo, tx)
+}
+
+type TestCase {
+  is_owner_signed: Bool,
+}
+
+fn get_test_tx(test_case: TestCase) {
+  let TestCase { is_owner_signed } = test_case
+  mocktail_tx()
+    |> required_signer_hash(is_owner_signed, mock_pub_key_hash(1))
+    |> complete()
+}
+
+// with mocktail
+test hello_mocktail() {
+  let out_ref = mock_utxo_ref(0, 0)
+  let redeemer = Redeemer { msg: "Hello, World!" }
+  let test_case = TestCase { is_owner_signed: True }
+  let tx = get_test_tx(test_case)
+  let datum = Datum { owner: mock_pub_key_hash(1) }
+  hello_world.spend(Some(datum), redeemer, out_ref, tx)
+}
