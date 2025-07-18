@@ -15,10 +15,6 @@ pub type MarketAction {
 }
 
 validator placeholder {
-  mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
-    todo @"mint logic goes here"
-  }
-
   spend(
     datum: Option<MarketDatum>,
     redeemer: MarketAction,
