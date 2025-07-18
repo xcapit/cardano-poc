@@ -1,5 +1,4 @@
 use aiken/collection/list
-// use types_hello_world.{Datum, Redeemer}
 use aiken/crypto.{VerificationKeyHash}
 use aiken/primitive/string
 use cardano/transaction.{OutputReference, Transaction}
