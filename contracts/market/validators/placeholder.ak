@@ -29,7 +29,7 @@ validator placeholder {
   ) {
     when redeemer is {
       MBuy -> True,
-      MEdit -> True,
+      MEdit {price} -> True,
       MDelist -> True
     }
   }
