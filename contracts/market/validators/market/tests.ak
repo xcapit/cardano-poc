@@ -27,7 +27,7 @@ test buy() {
       output: Output {
         address: Address { payment_credential: #"deef", stake_credential: None },
         value: marketValue,
-        datum: marketDatum,
+        datum: InlineDatum(marketDatum),
         reference_script: None,
       },
     }
