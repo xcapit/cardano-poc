@@ -27,7 +27,7 @@ validator placeholder {
     when redeemer is {
       MBuy -> True
       MEdit { price } -> True
-      MDelist -> list.has(tx.extra_signatories, seller)
+      MDelist -> list.has(tx.extra_signatories, d.seller)
     }
   }
 
