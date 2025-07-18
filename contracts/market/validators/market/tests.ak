@@ -19,7 +19,14 @@ test buy() {
 
     let marketInput =
         Input {
-            output_reference: oref
+            output_reference: oref,
+            output: Output {
+                address: ,
+                value: ,
+                datum:,
+                reference_script: None,
+            }
+
         }
 
     tx = 
