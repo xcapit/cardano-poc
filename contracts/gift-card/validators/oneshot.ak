@@ -51,8 +51,38 @@ type TestCase {
   has_utxo_ref_input: Bool,
   has_own_ref_input: Bool,
 }
-// fn get_test_tx(test_case: TestCase) {
-//   let TestCase { is_pair_token_amount } = test_case
-//   mocktail_tx()
-//     |> complete()
-// }
+
+fn get_test_tx(test_case: TestCase, own_ref: OutputReference, utxo_ref: OutputReference) -> Transaction {
+  let TestCase {
+    action,
+    token_name,
+    policy_id,
+    mint_amount,
+    has_utxo_ref_input,
+    has_own_ref_input
+  } = test_case
+
+  let asset = assets.from_pair(policy_id, token_name, mint_amount)
+  let mint = assets.from_token_list([asset])
+
+  let own_input = if has_own_ref_input {
+    Some(mock_input(own_ref, script_address(policy_id)))
+  } else {
+    None
+  }
+
+  let utxo_input = if has_utxo_ref_input {
+    Some(mock_input(utxo_ref, some_address))
+  } else {
+    None
+  }
+
+  let inputs =
+    list.filter_map([own_input, utxo_input], fn(i) { i })
+
+  Transaction {
+    inputs,
+    mint,
+    ..mocktail_tx()
+  }
+}
