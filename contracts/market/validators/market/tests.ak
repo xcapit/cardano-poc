@@ -11,7 +11,7 @@ test buy() {
     let marketAction = MBuy
 
     let marketValue = assets.merge(
-        
+        assets.from_lovelace(600),
     )
 
     let oref = mock_utxo_ref(0, 0)
