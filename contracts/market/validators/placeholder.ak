@@ -23,7 +23,7 @@ validator placeholder {
 
   spend(
     _datum: Option<MarketDatum>,
-    _redeemer: Data,
+    _redeemer: MarketAction,
     _utxo: OutputReference,
     _self: Transaction,
   ) {
