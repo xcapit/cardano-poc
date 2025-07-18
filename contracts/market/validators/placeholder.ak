@@ -1,5 +1,5 @@
 use cardano/assets.{PolicyId}
-use cardano/collection/list
+aiken/collection/list
 use cardano/transaction.{OutputReference, Transaction}
 
 pub type MarketDatum {
