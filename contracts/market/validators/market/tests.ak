@@ -56,6 +56,7 @@ test buy() {
             datum: NoDatum,
             reference_script: None,
         }
+        
     tx = 
         Transaction {
             .. placeholder,
