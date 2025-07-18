@@ -44,6 +44,11 @@ validator placeholder {
         expect Some(own_output) = list.find(tx.outputs, fn(output){ output.address.payment_credential == own_hash && output.value == own_input.output.value })
         expect InlineDatum(datum) = own_output.datum
         expect newDatum : MarketDatum = datum
+        and {
+          newDatum.seller == d.seller 
+          newDatum.price == price
+          list.has(tx.extra_signatories, d.seller)
+        }
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
