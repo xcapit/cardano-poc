@@ -63,7 +63,7 @@ test mint_check_mint_valid_token() {
           transaction.output(transaction.mock_address, value.zero),
         ),
       ],
-      mint: dict.insert(policy_id, mint_map, dict.new()),
+      mint: dict.insert(policy_id, mint_map),
       extra_signatories: [mock_pub_key_hash(1)],
     }
 
