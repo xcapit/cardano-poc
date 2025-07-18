@@ -50,7 +50,7 @@ test mint() {
     transaction.Transaction {
       ..transaction.placeholder,
       extra_signatories: [mock_pub_key_hash(1)],
-      mint: mint,
+      mint: 1,
     }
   gift_card.mint("T", mock_utxo_ref(0, 0), CheckMint, "", tx)
 }
