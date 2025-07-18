@@ -1,4 +1,4 @@
-use cardano/transaction.{OutputReference, Transaction}
+use cardano/transaction.{Transaction}
 use mocktail.{complete, invalid_before, mocktail_tx, required_signer_hash}
 use mocktail/virgin_key_hash.{mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
