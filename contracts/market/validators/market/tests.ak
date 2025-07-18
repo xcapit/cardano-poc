@@ -1,5 +1,5 @@
 use market/market
 
 test buy() {
-  True == True
+  market.market.spend()
 }
