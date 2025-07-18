@@ -18,7 +18,7 @@ validator placeholder {
   spend(
     datum: Option<MarketDatum>,
     redeemer: MarketAction,
-    _utxo: OutputReference,
+    utxo: OutputReference,
     tx: Transaction,
   ) {
     expect Some(d) = datum
@@ -36,7 +36,7 @@ validator placeholder {
         assets.lovelace_of(payment.value) == d.price
       }
       MEdit { price } -> {
-        expect Some(own_input) = list.find(tx.inputs, fn(input){})
+        expect Some(own_input) = list.find(tx.inputs, fn(input){ input.output_reference = o})
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
