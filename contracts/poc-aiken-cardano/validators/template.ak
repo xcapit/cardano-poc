@@ -4,7 +4,7 @@
 // use cardano/governance.{ProposalProcedure, Voter}
 // use cardano/transaction.{Transaction, OutputReference}
 
-// validator placeholder {
+// validator template {
 //   mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
 //     todo @"mint logic goes here"
 //   }
