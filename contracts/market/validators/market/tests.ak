@@ -13,7 +13,7 @@ test buy() {
 
   let marketValue =
     assets.merge(
-      assets.from_lovelace(600),
+      assets.from_lovelace(200),
       assets.from_asset(mock_policy_id(1), mock_pub_key_hash(3), 1),
     )
 
@@ -41,7 +41,7 @@ test buy() {
           payment_credential: VerificationKey(mock_pub_key_hash(2)),
           stake_credential: None,
         },
-        value: assets.from_lovelace(600),
+        value: assets.from_lovelace(200),
         datum: NoDatum,
         reference_script: None,
       },
