@@ -10,7 +10,9 @@ test buy() {
     let marketDatum = MarketDatum { price: 200, seller: seller}
     let marketAction = MBuy
 
-    let marketValue = assets.merge()
+    let marketValue = assets.merge(
+        
+    )
 
     let oref = mock_utxo_ref(0, 0)
     tx = Transaction {
