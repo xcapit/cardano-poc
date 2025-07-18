@@ -30,7 +30,9 @@ validator placeholder {
         expect Some(payment) =
           list.find(
             tx.outputs,
-            fn(output) { output.address.payment_credential },
+            fn(output) {
+              output.address.payment_credential == VerificationKey(d.seller)
+            },
           )
       }
       MEdit { price } -> True
