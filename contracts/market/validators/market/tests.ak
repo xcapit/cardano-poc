@@ -63,7 +63,7 @@ test buy() {
   let sellerOut =
     Output {
       address: Address {
-        payment_credential: mock_pub_key_hash(1),
+        payment_credential: VerificationKey(mock_pub_key_hash(1)),
         stake_credential: None,
       },
       value: assets.from_lovelace(600),
