@@ -22,7 +22,7 @@ test buy() {
             output_reference: oref,
             output: Output {
                 address: Address {
-                    payment_credential: mock_pub_key_hash(1),
+                    payment_credential: #"deef",
                     stake_credential: None,
                 },
                 value: marketValue,
