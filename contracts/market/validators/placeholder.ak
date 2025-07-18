@@ -36,7 +36,7 @@ validator placeholder {
         assets.lovelace_of(payment.value) == d.price
       }
       MEdit { price } -> {
-        expect Some(own_input) = list.find(tx.inputs, fn(input){ input.output_reference = o})
+        expect Some(own_input) = list.find(tx.inputs, fn(input){ input.output_reference = utxo})
       }
       MDelist -> list.has(tx.extra_signatories, d.seller)
     }
