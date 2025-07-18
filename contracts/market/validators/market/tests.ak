@@ -40,7 +40,7 @@ test buy() {
                     payment_credential: mock_pub_key_hash(2),
                     stake_credential: None,
                 },
-                value: marketValue,
+                value: assets.from_lovelace(600),
                 datum: marketDatum,
                 reference_script: None,
             }
