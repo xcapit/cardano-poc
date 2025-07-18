@@ -24,6 +24,7 @@ validator placeholder {
     _utxo: OutputReference,
     tx: Transaction,
   ) {
+    expect Some(datum) = datum
     when redeemer is {
       MBuy -> True
       MEdit { price } -> True
