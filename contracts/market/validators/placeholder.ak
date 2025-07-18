@@ -35,6 +35,7 @@ validator placeholder {
               output.address.payment_credential == VerificationKey(d.seller)
             },
           )
+        //payment value is correct
         assets.lovelace_of(payment.value) == d.price
       }
       MEdit { price } -> True
