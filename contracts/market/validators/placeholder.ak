@@ -22,12 +22,12 @@ validator placeholder {
     datum: Option<MarketDatum>,
     redeemer: MarketAction,
     _utxo: OutputReference,
-    self: Transaction,
+    tx: Transaction,
   ) {
     when redeemer is {
       MBuy -> True
       MEdit { price } -> True
-      MDelist -> list.has(tx)
+      MDelist -> list.has(self)
     }
   }
 
