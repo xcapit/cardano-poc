@@ -57,7 +57,6 @@ test mint_check_mint_valid_token() {
   let tx = transaction.Transaction {
     ..transaction.placeholder,
     inputs: [
-      // necesario para que el CheckMint pase (requiere que utxo_ref esté presente)
       transaction.input(mock_utxo_ref(0, 0), transaction.output(transaction.mock_address, value.zero))
     ],
     mint: dict.insert(policy_id, mint_map, dict.new()),
