@@ -9,7 +9,7 @@ pub type Redeemer {
 validator basics {
   spend(
     _datum: Option<Data>,
-    r: Data,
+    r: Redeemer,
     _utxo: OutputReference,
     _self: Transaction,
   ) {
