@@ -42,7 +42,6 @@ validator check_datum {
     _self: Transaction,
   ) {
     let RedeemerWithMessage { message } = r
-    trace @"redeemer": message
     when d is {
       Some(Datum1 { secret }) -> message == secret
       _ -> False
