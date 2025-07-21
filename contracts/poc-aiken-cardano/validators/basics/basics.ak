@@ -1,5 +1,7 @@
 use cardano/transaction.{OutputReference, Transaction}
 
+pub type Redeemer {Redeemer}
+
 validator template {
   spend(
     _datum: Option<Data>,
