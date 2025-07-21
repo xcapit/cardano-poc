@@ -1,6 +1,9 @@
 use cardano/transaction.{OutputReference, Transaction}
 
-pub type Redeemer {Redeemer}
+pub type Redeemer {
+    SuccessRedeemer,
+
+}
 
 validator template {
   spend(
