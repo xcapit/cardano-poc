@@ -2,7 +2,8 @@ use cardano/transaction.{OutputReference, Transaction}
 
 pub type Redeemer {
     SuccessRedeemer,
-
+    AnotherSuccessCase,
+    FailRedeemer
 }
 
 validator template {
