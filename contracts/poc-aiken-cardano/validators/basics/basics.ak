@@ -1,5 +1,3 @@
-use cardano/address.{Credential}
-use cardano/assets.{PolicyId}
 use cardano/transaction.{OutputReference, Transaction}
 
 validator template {
