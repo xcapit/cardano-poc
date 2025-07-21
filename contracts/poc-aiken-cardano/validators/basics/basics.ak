@@ -1,8 +1,8 @@
 use cardano/transaction.{OutputReference, Transaction}
 
 pub type Redeemer {
-    SuccessRedeemer,
-    AnotherSuccessCase,
+    SuccessRedeemer
+    AnotherSuccessCase
     FailRedeemer
 }
 
