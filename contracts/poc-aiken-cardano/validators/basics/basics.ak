@@ -14,7 +14,9 @@ validator template {
     _self: Transaction,
   ) {
     when r is {
-        
+        SuccessRedeemer -> True,
+        AnotherSuccessCase -> True,
+        _ -> False
     }
   }
 
