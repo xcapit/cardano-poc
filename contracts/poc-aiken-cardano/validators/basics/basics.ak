@@ -1,12 +1,12 @@
 use cardano/transaction.{OutputReference, Transaction}
 
 pub type Redeemer {
-    SuccessRedeemer
-    AnotherSuccessCase
-    FailRedeemer
+  SuccessRedeemer
+  AnotherSuccessCase
+  FailRedeemer
 }
 
-validator basics {
+validator check_redeemer {
   spend(
     _datum: Option<Data>,
     r: Redeemer,
@@ -14,9 +14,9 @@ validator basics {
     _self: Transaction,
   ) {
     when r is {
-        SuccessRedeemer -> True
-        AnotherSuccessCase -> True
-        _ -> False
+      SuccessRedeemer -> True
+      AnotherSuccessCase -> True
+      _ -> False
     }
   }
 
@@ -25,3 +25,31 @@ validator basics {
   }
 }
 
+pub type DatumDatum {
+  Datum1 { secret: ByteArray }
+  Datum2
+}
+
+pub type RedeemerDatum {
+  RedeemerWithMessage { message: ByteArray }
+}
+
+validator check_datum {
+  spend(
+    d: Option<DatumDatum>,
+    r: RedeemerDatum,
+    _utxo: OutputReference,
+    _self: Transaction,
+  ) {
+    let RedeemerWithMessage { message } = r
+    trace @"redeemer": message
+    when d is {
+      Some(Datum1 { secret }) -> message == secret
+      _ -> False
+    }
+  }
+
+  else(_) {
+    fail
+  }
+}
