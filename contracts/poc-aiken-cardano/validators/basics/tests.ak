@@ -8,6 +8,6 @@ test basics_sucess(){
 test basics_success_2(){
     basics.basics.spend(None,AnotherSuccessCase, mock_utxo_ref(0,0), placeholder)
 }
-test basics,(){
+test basics2(){
     basics.basics.spend(None,FailRedeemer, mock_utxo_ref(0,0), placeholder)
 }
