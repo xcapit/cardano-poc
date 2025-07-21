@@ -1,4 +1,4 @@
-use basics/basics
+use basics/basics.{ SuccessRedeemer, AnotherSuccessCase}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
 use cardano/transaction.{placeholder}
 
