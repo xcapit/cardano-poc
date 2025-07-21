@@ -9,5 +9,5 @@ test basics_success_2(){
     basics.basics.spend(None,AnotherSuccessCase, mock_utxo_ref(0,0), placeholder)
 }
 test basics_fail_redeemer(){
-    basics.basics.spend(None,FailRedeemer, mock_utxo_ref(0,0), placeholder)
+    basics.basics.spend(None,FailRedeemer, mock_utxo_ref(0,0), placeholder) == false
 }
