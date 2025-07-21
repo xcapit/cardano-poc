@@ -6,7 +6,7 @@ pub type Redeemer {
     FailRedeemer
 }
 
-validator s {
+validator basics {
   spend(
     _datum: Option<Data>,
     r: Data,
