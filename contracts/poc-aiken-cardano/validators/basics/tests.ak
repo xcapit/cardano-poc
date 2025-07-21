@@ -5,7 +5,7 @@ use cardano/transaction.{placeholder}
 test basics_sucess(){
     basics.basics.spend(None,SuccessRedeemer, mock_utxo_ref(0,0), placeholder)
 }
-test basics_sucess_2(){
+test basics_success_2(){
     basics.basics.spend(None,AnotherSuccessCase, mock_utxo_ref(0,0), placeholder)
 }
 test basics_fail(){
