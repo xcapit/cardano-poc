@@ -14,8 +14,8 @@ validator basics {
     _self: Transaction,
   ) {
     when r is {
-        SuccessRedeemer -> True,
-        AnotherSuccessCase -> True,
+        SuccessRedeemer -> True
+        AnotherSuccessCase -> True
         _ -> False
     }
   }
