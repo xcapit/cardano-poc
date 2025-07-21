@@ -1,7 +1,5 @@
-use basics/basics.{ SuccessRedeemer
-    AnotherSuccessCase
-    FailRedeemer}
+use basics/basics.{ SuccessRedeemer }
 
 test basics_sucess(){
-    basics.basics.spend(None,)
+    basics.basics.spend(None,SuccessRedeemer)
 }
