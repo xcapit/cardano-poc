@@ -6,7 +6,7 @@ pub type Redeemer {
     FailRedeemer
 }
 
-validator template {
+validator basics {
   spend(
     _datum: Option<Data>,
     r: Data,
@@ -24,3 +24,4 @@ validator template {
     fail
   }
 }
+
