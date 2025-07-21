@@ -13,7 +13,9 @@ validator template {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
-    todo @"spend logic goes here"
+    when r is {
+        
+    }
   }
 
   else(_) {
