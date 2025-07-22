@@ -61,6 +61,9 @@ validator check_only_input_only_output {
     tx: Transaction,
   ) {
     let Transaction { inputs, outputs, .. } = tx
+    when (inputs, outputs) is {
+      ([_], [_]) -> True
+    }
   }
 
   else(_) {
