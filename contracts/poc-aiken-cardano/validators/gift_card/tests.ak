@@ -5,5 +5,5 @@ use mocktail/virgin_key_hash.{mock_policy_id}
 
 test mock_tx_mint() -> Transaction {
   mocktail_tx()
-    |> mint(True,1,mock_policy_id(0),mock)
+    |> mint(True,1,mock_policy_id(0),"test token name")
 }
