@@ -60,5 +60,10 @@ test check_datum_fail_2() {
 }
 
 test check_only_1_input_and_output_success() {
-  basics.check_only_1_input_and_output.spend(None, Void)
+  basics.check_only_1_input_and_output.spend(
+    None,
+    Void,
+    mock_utxo_ref(0, 0),
+    tx,
+  )
 }
