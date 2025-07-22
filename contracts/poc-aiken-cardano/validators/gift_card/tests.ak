@@ -49,7 +49,7 @@ test mock_equal_tx() {
 
 test minting() {
   oneshot.gift_card.mint(
-    "test name",
+    "testx name",
     mock_utxo_ref(0, 0),
     CheckMint,
     mock_policy_id(0),
