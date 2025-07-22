@@ -23,7 +23,7 @@ fn mock_tx_without_mocktail() -> Transaction {
     }
   Transaction {
     ..placeholder,
-    mint: from_asset(mock_policy_id(0), "test token name", 1),
+    mint: from_asset(mock_policy_id(0), #"cffe", 1),
     inputs: [input],
   }
 }
