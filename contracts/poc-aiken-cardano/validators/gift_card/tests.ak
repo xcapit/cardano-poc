@@ -25,5 +25,10 @@ test mock_equal_tx() {
 }
 
 test minting() {
-  oneshot.gift_card.mint("test token name", mock_utxo_ref(0, 0))
+  oneshot.gift_card.mint(
+    "test token name",
+    mock_utxo_ref(0, 0),
+    CheckMint,
+    mock_policy_id(0),
+  )
 }
