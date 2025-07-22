@@ -15,7 +15,7 @@ fn mock_tx_without_mocktail() -> Transaction {
 fn mock_tx_with_mocktail() -> Transaction {
   mocktail_tx()
     |> mint(True, 1, mock_policy_id(0), "test token name")
-    |> tx_in(True, 0, 0, 1, #"a")
+    |> tx_in(True, 0, 0, 1, #"adaa")
     |> complete()
 }
 
