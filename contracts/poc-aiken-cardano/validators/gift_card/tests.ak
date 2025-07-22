@@ -24,5 +24,5 @@ test mock_equal_tx() {
 }
 
 test mint() {
-  gift_card.gift_card.mint()
+  oneshot.mint()
 }
