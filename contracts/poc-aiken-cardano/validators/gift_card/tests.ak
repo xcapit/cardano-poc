@@ -1,7 +1,7 @@
 use cardano/assets.{from_asset}
 use cardano/transaction.{Transaction, placeholder}
 use gift_card/oneshot.{CheckMint}
-use mocktail.{complete, mocktail_tx}
+use mocktail.{complete, mint, mocktail_tx}
 use mocktail/virgin_key_hash.{mock_policy_id}
 
 fn mock_tx_without_mocktail() -> Transaction {
