@@ -22,6 +22,7 @@ test mock_equal_tx() {
   let without_mocktail = mock_tx_without_mocktail()
   with_mocktail == without_mocktail
 }
-// test mint() {
-//   oneshot.gift_card.mint()
-// }
+
+test mint() {
+  gift_card.gift_card.mint()
+}
