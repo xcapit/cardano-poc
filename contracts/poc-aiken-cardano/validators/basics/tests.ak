@@ -3,6 +3,7 @@ use basics/basics.{
   SuccessRedeemer,
 }
 use cardano/transaction.{placeholder}
+use mocktail.{complete, mocktail_tx, tx_in, tx_out}
 use mocktail/virgin_output_reference.{mock_utxo_ref}
 
 test check_redeemer_sucess() {
