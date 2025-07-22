@@ -2,8 +2,7 @@ use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Transaction, placeholder}
 use gift_card/oneshot.{CheckMint}
 use mocktail.{
-  add_input, add_output, complete, mint, mock_pub_key_address,
-  mock_pub_key_address, mock_pub_key_hash, mock_pub_key_hash,
+  add_input, add_output, complete, mint, mock_pub_key_address, mock_pub_key_hash,
   mock_pub_key_output, mock_tx_hash, mock_utxo_ref, mocktail_tx, mocktail_tx,
   set_fee, tx_in, tx_in, tx_out,
 }
