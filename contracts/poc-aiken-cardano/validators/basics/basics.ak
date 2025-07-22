@@ -60,7 +60,7 @@ validator check_only_input_only_output {
     _utxo: OutputReference,
     tx: Transaction,
   ) {
-    todo
+    let Transaction { inputs, outputs, .. } = tx
   }
 
   else(_) {
