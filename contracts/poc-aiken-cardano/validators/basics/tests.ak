@@ -58,3 +58,7 @@ test check_datum_fail_2() {
     placeholder,
   ) == False
 }
+
+test check_only_1_input_and_output_success() {
+  todo
+}
