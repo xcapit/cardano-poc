@@ -60,5 +60,5 @@ test check_datum_fail_2() {
 }
 
 test check_only_1_input_and_output_success() {
-  todo
+  basics.check_only_1_input_and_output.spend()
 }
