@@ -1,4 +1,4 @@
-use cardano/assets.{from_lovelace}
+use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Transaction}
 use gift_card/oneshot.{CheckMint}
 use mocktail.{complete, mint, mocktail_tx, tx_in}
