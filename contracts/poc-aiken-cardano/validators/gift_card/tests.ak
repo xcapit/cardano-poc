@@ -1,3 +1,4 @@
+use cardano/address.{Address, VerificationKey}
 use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Address, Input, Output, Transaction}
 use gift_card/oneshot.{CheckMint}
