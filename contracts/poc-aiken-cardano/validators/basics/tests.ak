@@ -69,13 +69,7 @@ test check_only_1_input_and_output_success() {
           from_lovelace(10_000_000),
           mock_pub_key_address(0, None),
         )
-      |> tx_out(
-          True,
-          mock_tx_hash(0),
-          0,
-          from_lovelace(10_000_000),
-          mock_pub_key_address(0, None),
-        )
+      |> tx_out(True, mock_pub_key_address(0, None), from_lovelace(1_000_000))
       |> complete()
   basics.check_only_1_input_and_output.spend(
     None,
