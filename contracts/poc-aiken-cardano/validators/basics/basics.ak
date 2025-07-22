@@ -58,9 +58,9 @@ validator check_only_input_only_output {
     _datum: Option<Data>,
     _redeemer: Data,
     _utxo: OutputReference,
-    _self: Transaction,
+    tx: Transaction,
   ) {
-    todo @"spend logic goes here"
+    todo
   }
 
   else(_) {
