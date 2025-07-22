@@ -1,6 +1,6 @@
 use cardano/address.{Address, VerificationKey}
 use cardano/assets.{from_asset, from_lovelace}
-use cardano/transaction.{Input, Output, Transaction}
+use cardano/transaction.{Input, NoDatum, Output, Transaction}
 use gift_card/oneshot.{CheckMint}
 use mocktail.{complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_address.{mock_pub_key_address}
