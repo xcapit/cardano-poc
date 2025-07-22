@@ -7,6 +7,19 @@ use mocktail/virgin_key_hash.{mock_policy_id}
 use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
 
 fn mock_tx_without_mocktail() -> Transaction {
+  let input =
+    Input {
+      output_reference: mock_utxo_ref(0, 0),
+      output: Output {
+        address: Address {
+          payment_credential: VerificationKey(mock_pub_key_hash(0)),
+          stake_credential: None,
+        },
+        value: from_asset("", "", 10_000_000),
+        datum: NoDatum,
+        reference_script: None,
+      },
+    }
   Transaction {
     ..placeholder,
     mint: from_asset(mock_policy_id(0), "test token name", 1),
