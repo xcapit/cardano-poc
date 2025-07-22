@@ -37,7 +37,7 @@ fn mock_tx_with_mocktail() -> Transaction {
         from_lovelace(10_000_000),
         mock_pub_key_address(0, None),
       )
-    |> mint(True, 1, mock_policy_id(0), "test token name")
+    |> mint(True, 1, mock_policy_id(0), #"c0fe")
     |> complete()
 }
 
