@@ -13,15 +13,14 @@ fn mock_tx_without_mocktail() -> Transaction {
 }
 
 fn mock_tx_with_mocktail() -> Transaction {
-  let input =
-    Input {
-      output_reference: mock_utxo_ref(0, 0),
-      output: mock_pub_key_output(
-        mock_pub_key_address(0, None),
-        from_lovelace(10_000_000),
-      ),
-    }
   mocktail_tx()
+    |> tx_in(
+        True,
+        mock_tx_hash(0),
+        0,
+        from_lovelace(10_000_000),
+        mock_pub_key_address(0, None),
+      )
     |> mint(True, 1, mock_policy_id(0), "test token name")
     |> complete()
 }
