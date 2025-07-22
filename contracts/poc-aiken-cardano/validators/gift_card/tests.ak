@@ -23,6 +23,6 @@ test mock_equal_tx() {
   with_mocktail == without_mocktail
 }
 
-test mint() {
+test minting() {
   oneshot.mint()
 }
