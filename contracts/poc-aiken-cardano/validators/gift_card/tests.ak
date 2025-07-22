@@ -1,1 +1,1 @@
-use gift_card/oneshot
+use gift_card/oneshot.{CheckMint}
