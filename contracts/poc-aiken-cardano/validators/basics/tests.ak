@@ -4,7 +4,8 @@ use basics/basics.{
 }
 use cardano/transaction.{placeholder}
 use mocktail.{complete, mocktail_tx, tx_in, tx_out}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail/virgin_output_reference.{mock_tx_hash,
+  mock_utxo_ref, mock_utxo_ref}
 
 test check_redeemer_sucess() {
   basics.check_redeemer.spend(
