@@ -5,7 +5,7 @@ use mocktail.{
   add_input, add_output, complete, mint, mock_tx_hash, mocktail_tx, tx_in,
 }
 use mocktail/virgin_key_hash.{mock_policy_id}
-use mocktail/virgin_output_reference.{mock_utxo_ref}
+use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
 
 fn mock_tx_without_mocktail() -> Transaction {
   Transaction {
