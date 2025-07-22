@@ -53,7 +53,7 @@ validator check_datum {
   }
 }
 
-validator check_only_input_only_output {
+validator check_only_1_input_and_output {
   spend(
     _datum: Option<Data>,
     _redeemer: Data,
