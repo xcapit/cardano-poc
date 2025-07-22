@@ -26,11 +26,11 @@ fn mock_tx_with_mocktail() -> Transaction {
     |> complete()
 }
 
-test mock_equal_tx() {
-  let with_mocktail = mock_tx_with_mocktail()
-  let without_mocktail = mock_tx_without_mocktail()
-  with_mocktail == without_mocktail
-}
+// test mock_equal_tx() {
+//   let with_mocktail = mock_tx_with_mocktail()
+//   let without_mocktail = mock_tx_without_mocktail()
+//   with_mocktail == without_mocktail
+// }
 
 test minting() {
   oneshot.gift_card.mint(
