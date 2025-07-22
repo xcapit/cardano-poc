@@ -16,3 +16,9 @@ fn mock_tx_with_mocktail() -> Transaction {
     |> mint(True, 1, mock_policy_id(0), "test token name")
     |> complete()
 }
+
+test mock_equal_tx() {
+  let with_mocktail = mock_tx_with_mocktail()
+  let without_mocktail = mock_tx_without_mocktail()
+  with_mocktail == without_mocktail
+}
