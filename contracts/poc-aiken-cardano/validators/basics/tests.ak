@@ -60,6 +60,23 @@ test check_datum_fail_2() {
 }
 
 test check_only_1_input_and_output_success() {
+  let tx =
+    mocktail_tx()
+      |> tx_in(
+          True,
+          mock_tx_hash(0),
+          0,
+          from_lovelace(10_000_000),
+          mock_pub_key_address(0, None),
+        )
+      |> tx_out(
+          True,
+          mock_tx_hash(0),
+          0,
+          from_lovelace(10_000_000),
+          mock_pub_key_address(0, None),
+        )
+      |> complete()
   basics.check_only_1_input_and_output.spend(
     None,
     Void,
