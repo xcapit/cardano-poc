@@ -4,7 +4,7 @@ use cardano/transaction.{Input, Output, Transaction}
 use gift_card/oneshot.{CheckMint}
 use mocktail.{complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_address.{mock_pub_key_address}
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
 use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
 
 fn mock_tx_without_mocktail() -> Transaction {
