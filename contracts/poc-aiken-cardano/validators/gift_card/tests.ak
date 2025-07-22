@@ -1,9 +1,7 @@
 use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Transaction, placeholder}
 use gift_card/oneshot.{CheckMint}
-use mocktail.{
-  add_input, add_output, complete, mint, mock_tx_hash, mocktail_tx, tx_in,
-}
+use mocktail.{add_input, add_output, complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_key_hash.{mock_policy_id}
 use mocktail/virgin_output_reference.{mock_tx_hash, mock_utxo_ref}
 
