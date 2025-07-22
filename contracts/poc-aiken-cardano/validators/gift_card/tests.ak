@@ -3,6 +3,7 @@ use cardano/transaction.{Transaction, placeholder}
 use gift_card/oneshot.{CheckMint}
 use mocktail.{complete, mint, mocktail_tx}
 use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail/virgin_output_reference.{mock_utxo_ref}
 
 fn mock_tx_without_mocktail() -> Transaction {
   Transaction {
@@ -24,5 +25,5 @@ test mock_equal_tx() {
 }
 
 test minting() {
-  oneshot.gift_card.mint("test token name")
+  oneshot.gift_card.mint("test token name", mock_utxo_ref(0, 0))
 }
