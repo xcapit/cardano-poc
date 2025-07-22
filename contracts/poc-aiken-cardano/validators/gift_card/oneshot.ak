@@ -28,6 +28,7 @@ validator gift_card(token_name: ByteArray, utxo_ref: OutputReference) {
       mint
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
+    trace @   
     when rdmr is {
       CheckMint -> {
         expect
