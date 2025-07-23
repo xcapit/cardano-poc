@@ -120,6 +120,7 @@ test check_1_input_and_2_outputs_success() {
           mock_pub_key_address(0, None),
         )
       |> tx_out(True, mock_pub_key_address(0, None), from_lovelace(1_000_000))
+      |> tx_out(True, mock_pub_key_address(0, None), from_lovelace(1_000_000))
       |> complete()
   basics.check_only_1_input_and_output.spend(
     None,
