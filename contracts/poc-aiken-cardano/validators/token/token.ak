@@ -1,7 +1,8 @@
 use aiken/crypto.{VerificationKeyHash}
 
 pub type Datum {
-  TokenState { total_supply: Int, owner: VerificationKeyHash }
+  TokenState { total_supply: Int, 
+  owner: VerificationKeyHash }
 }
 
 const token_name = "Xcapit"
