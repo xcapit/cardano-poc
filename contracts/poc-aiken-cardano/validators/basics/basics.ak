@@ -75,5 +75,5 @@ validator check_only_1_input_and_output {
 }
 
 fn only_owner(owner: PubKeyHash, tx: Transaction) {
-  key_signed(tx.extra_signatories, datum.owner)
+  key_signed(tx.extra_signatories, owner)
 }
