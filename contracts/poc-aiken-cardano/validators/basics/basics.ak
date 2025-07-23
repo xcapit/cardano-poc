@@ -1,4 +1,3 @@
-use cardano/crypto.{PubKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
 use vodka_extra_signatories.{key_signed}
 
