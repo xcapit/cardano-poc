@@ -1,6 +1,8 @@
 use cardano/transaction.{Transaction}
 use opz/opz
 
+const owner = mock_pub_key_hash(-),
+
 fn mock_tx_with_sign_owner() {
   Transaction { ..placeholder, extra_signatories: extra_signatories }
 }
