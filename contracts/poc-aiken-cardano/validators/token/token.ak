@@ -1,4 +1,4 @@
-pub type Supply {
+pub type SupplyDatum {
   TotalSupply { count: Int }
 }
 
