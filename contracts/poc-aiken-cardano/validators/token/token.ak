@@ -15,7 +15,7 @@ validator token {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
-    todo
+    True
   }
 
   else(_) {
