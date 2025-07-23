@@ -13,6 +13,7 @@ fn mock_tx_without_sign_owner() {
 }
 
 test is_owner() {
+  let tx = mock_tx_with_sign_owner()
   opz.isOwner()
 }
 
