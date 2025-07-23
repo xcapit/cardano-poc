@@ -1,8 +1,7 @@
 use cardano/address.{Address, VerificationKey}
 use cardano/assets.{from_asset, from_lovelace}
 use cardano/transaction.{Input, NoDatum, Output, Transaction, placeholder}
-use gift_card/oneshot.{CheckBurn}
-//CheckMint}
+use gift_card/oneshot.{CheckBurn, CheckMint}
 use mocktail.{complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_address.{mock_pub_key_address}
 use mocktail/virgin_key_hash.{mock_policy_id, mock_pub_key_hash}
@@ -61,15 +60,15 @@ test mock_equal_tx() {
   with_mocktail == without_mocktail
 }
 
-// test minting() {
-//   oneshot.gift_card.mint(
-//     #"cffe",
-//     mock_utxo_ref(0, 0),
-//     CheckMint,
-//     mock_policy_id(0),
-//     mock_tx_with_mocktail(),
-//   )
-// }
+test minting() {
+  oneshot.gift_card.mint(
+    #"cffe",
+    mock_utxo_ref(0, 0),
+    CheckMint,
+    mock_policy_id(0),
+    mock_tx_with_mocktail(),
+  )
+}
 
 test burning() {
   oneshot.gift_card.mint(
