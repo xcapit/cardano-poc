@@ -16,6 +16,7 @@ validator token {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
+    token_name && token_symbol
     True
   }
 
