@@ -106,5 +106,5 @@ test check_only_1_input_and_output_success() {
     Void,
     mock_utxo_ref(0, 0),
     tx,
-  )
+  ) == False
 }
