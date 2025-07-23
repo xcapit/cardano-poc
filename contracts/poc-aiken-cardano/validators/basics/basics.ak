@@ -71,3 +71,9 @@ validator check_only_1_input_and_output {
     fail
   }
 }
+
+validator mint_token {
+  else(_) {
+    fail
+  }
+}
