@@ -61,13 +61,6 @@ test burning() {
   oneshot.gift_card.mint(
     #"cffe",
     mock_utxo_ref(0, 0),
-    CheckMint,
-    mock_policy_id(0),
-    mock_tx_with_mocktail(),
-  )
-  oneshot.gift_card.mint(
-    #"cffe",
-    mock_utxo_ref(0, 0),
     CheckBurn,
     mock_policy_id(0),
     mock_tx_with_mocktail(),
