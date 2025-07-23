@@ -10,7 +10,7 @@ pub fn mock_tx_with_sign_owner() {
   Transaction { ..placeholder, extra_signatories: [owner] }
 }
 
-pub fn mock_tx_with_sign_owner() {
+pub fn mock_tx_with_sign_other() {
   Transaction { ..placeholder, extra_signatories: [other] }
 }
 
