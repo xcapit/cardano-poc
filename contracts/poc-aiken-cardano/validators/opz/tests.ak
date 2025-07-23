@@ -1,4 +1,4 @@
-use cardano/transaction.{Transaction}
+use cardano/transaction.{Transaction, placeholder}
 use mocktail/virgin_key_hash.{mock_pub_key_hash}
 use opz/opz
 
