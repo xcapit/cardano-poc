@@ -11,3 +11,7 @@ fn mock_tx_without_sign_owner() {
 test is_owner() {
   opz.isOwner()
 }
+
+test is_not_owner() {
+  opz.isOwner()
+}
