@@ -72,6 +72,6 @@ validator check_only_1_input_and_output {
   }
 }
 
-fn only_owner(owner:,tx:Transaction){
-  
+fn only_owner(owner: PubKeyHash, tx: Transaction) {
+  todo
 }
