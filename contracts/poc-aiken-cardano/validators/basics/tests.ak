@@ -82,7 +82,7 @@ test check_only_1_input_and_output_success() {
   )
 }
 
-test check_only_1_input_and_output_success() {
+test check_2_input_and_1_output_fail() {
   let tx =
     mocktail_tx()
       |> tx_in(
@@ -106,5 +106,5 @@ test check_only_1_input_and_output_success() {
     Void,
     mock_utxo_ref(0, 0),
     tx,
-  ) == False
+  )
 }
