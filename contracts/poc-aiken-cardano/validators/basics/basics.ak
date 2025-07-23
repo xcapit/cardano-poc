@@ -72,8 +72,6 @@ validator check_only_1_input_and_output {
   }
 }
 
-validator only_owner {
-  else(_) {
-    fail
-  }
+fn only_owner(owner:,tx:Transaction){
+  
 }
