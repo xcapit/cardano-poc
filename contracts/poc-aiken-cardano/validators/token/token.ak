@@ -2,7 +2,7 @@ pub type Datum {
   TotalSupply { count: Int }
 }
 
-const token = "Xcapit"
+const token_name = "Xcapit"
 
 validator token {
   else(_) {
