@@ -1,3 +1,4 @@
+use cardano/crypto.{PubKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
 
 pub type Redeemer {
