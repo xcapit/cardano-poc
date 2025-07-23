@@ -1,1 +1,1 @@
-const token = "Token Xcapit"
+const token = "Xcapit"
