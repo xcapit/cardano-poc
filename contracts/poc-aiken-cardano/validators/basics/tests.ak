@@ -81,3 +81,23 @@ test check_only_1_input_and_output_success() {
     tx,
   )
 }
+
+test check_only_1_input_and_output_success() {
+  let tx =
+    mocktail_tx()
+      |> tx_in(
+          True,
+          mock_tx_hash(0),
+          0,
+          from_lovelace(10_000_000),
+          mock_pub_key_address(0, None),
+        )
+      |> tx_out(True, mock_pub_key_address(0, None), from_lovelace(1_000_000))
+      |> complete()
+  basics.check_only_1_input_and_output.spend(
+    None,
+    Void,
+    mock_utxo_ref(0, 0),
+    tx,
+  )
+}
