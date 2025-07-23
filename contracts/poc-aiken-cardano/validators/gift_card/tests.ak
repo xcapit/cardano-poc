@@ -41,6 +41,19 @@ fn mock_tx_with_mocktail() -> Transaction {
     |> complete()
 }
 
+fn mock_tx_with_mocktail_burn() -> Transaction {
+  mocktail_tx()
+    |> tx_in(
+        True,
+        mock_tx_hash(0),
+        0,
+        from_lovelace(10_000_000),
+        mock_pub_key_address(0, None),
+      )
+    |> mint(True, 1, mock_policy_id(0), #"cffe")
+    |> complete()
+}
+
 test mock_equal_tx() {
   let with_mocktail = mock_tx_with_mocktail()
   let without_mocktail = mock_tx_without_mocktail()
