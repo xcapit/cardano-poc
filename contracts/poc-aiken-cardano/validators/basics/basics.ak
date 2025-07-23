@@ -1,5 +1,7 @@
 use cardano/crypto.{PubKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
+use vodka_extra_signatories.{key_signed}
+
 
 pub type Redeemer {
   SuccessRedeemer
@@ -74,5 +76,5 @@ validator check_only_1_input_and_output {
 }
 
 fn only_owner(owner: PubKeyHash, tx: Transaction) {
-  todo
+  tx.
 }
