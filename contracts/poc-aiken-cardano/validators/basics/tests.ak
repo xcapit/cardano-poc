@@ -94,7 +94,7 @@ test check_2_input_and_1_output_fail() {
         )
       |> tx_in(
           True,
-          mock_tx_hash(0),
+          mock_tx_hash(1),
           1,
           from_lovelace(10_000_000),
           mock_pub_key_address(0, None),
