@@ -11,7 +11,7 @@ pub fn mock_tx_with_sign_owner() {
 }
 
 pub fn mock_tx_without_sign_owner() {
-  Transaction { ..placeholder, extra_signatories: [owner] }
+  Transaction { ..placeholder, extra_signatories: [] }
 }
 
 test is_owner() {
