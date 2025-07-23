@@ -18,5 +18,5 @@ test is_owner() {
 }
 
 test is_not_owner() {
-  opz.isOwner()
+  todo
 }
