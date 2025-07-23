@@ -4,7 +4,7 @@ pub type Datum {
 
 const token = "Xcapit"
 
-validator faucet {
+validator token {
   else(_) {
     fail
   }
