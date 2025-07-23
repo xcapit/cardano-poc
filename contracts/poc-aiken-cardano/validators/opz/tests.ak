@@ -5,7 +5,7 @@ use opz/opz
 const owner = mock_pub_key_hash(0)
 
 fn mock_tx_with_sign_owner() {
-  Transaction { ..placeholder, extra_signatories: extra_signatories }
+  Transaction { ..placeholder, extra_signatories: [owner] }
 }
 
 fn mock_tx_without_sign_owner() {
