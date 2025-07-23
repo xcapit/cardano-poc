@@ -73,7 +73,3 @@ validator check_only_1_input_and_output {
     fail
   }
 }
-
-pub fn only_owner(owner: VerificationKeyHash, tx: Transaction) {
-  key_signed(tx.extra_signatories, owner)
-}
