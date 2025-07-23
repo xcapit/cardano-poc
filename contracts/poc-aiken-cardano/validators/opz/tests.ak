@@ -2,7 +2,7 @@ use cardano/transaction.{Transaction}
 use opz/opz
 
 fn mock_tx_with_sign_owner() {
-  Transaction { ..placeholder }
+  Transaction { ..placeholder, extra_signatories: extra_signatories }
 }
 
 fn mock_tx_without_sign_owner() {
