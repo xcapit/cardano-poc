@@ -3,3 +3,9 @@ pub type Datum {
 }
 
 const token = "Xcapit"
+
+validator faucet {
+  else(_) {
+    fail
+  }
+}
