@@ -4,7 +4,7 @@ pub type Datum {
 
 const token_name = "Xcapit"
 
-const symbol = "Xc"
+const token_symbol = "Xc"
 
 validator token {
   else(_) {
