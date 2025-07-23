@@ -82,7 +82,7 @@ test check_only_1_input_and_output_success() {
   )
 }
 
-test check_2_input_and_1_output_fail() {
+test check_2_inputs_and_1_output_fail() {
   let tx =
     mocktail_tx()
       |> tx_in(
