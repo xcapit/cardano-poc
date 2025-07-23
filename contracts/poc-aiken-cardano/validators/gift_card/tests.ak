@@ -50,7 +50,7 @@ fn mock_tx_with_mocktail_burn() -> Transaction {
         from_lovelace(10_000_000),
         mock_pub_key_address(0, None),
       )
-    |> mint(True, 1, mock_policy_id(0), #"cffe")
+    |> mint(True, -1, mock_policy_id(0), #"cffe")
     |> complete()
 }
 
