@@ -5,6 +5,10 @@ pub type Datum {
   TokenState { total_supply: Int, owner: VerificationKeyHash }
 }
 
+pub type Redeemer {
+  Mint { amount: Int }
+}
+
 const token_name = "Xcapit"
 
 const token_symbol = "Xc"
