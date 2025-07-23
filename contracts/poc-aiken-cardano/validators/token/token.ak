@@ -1,5 +1,5 @@
 pub type Datum {
-  TokenState { count: Int }
+  TokenState { total_supply: Int, owner: VerificationKeyHash }
 }
 
 const token_name = "Xcapit"
