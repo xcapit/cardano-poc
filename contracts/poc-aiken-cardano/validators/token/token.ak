@@ -16,7 +16,7 @@ validator token {
     _utxo: OutputReference,
     _self: Transaction,
   ) {
-    token_name == "Xcapit" && token_symbol
+    token_name == "Xcapit" && token_symbol == "Xc"
   }
 
   else(_) {
