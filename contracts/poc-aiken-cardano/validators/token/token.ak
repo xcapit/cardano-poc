@@ -17,7 +17,6 @@ validator token {
     _self: Transaction,
   ) {
     token_name && token_symbol
-    True
   }
 
   else(_) {
