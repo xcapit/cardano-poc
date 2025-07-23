@@ -72,7 +72,7 @@ validator check_only_1_input_and_output {
   }
 }
 
-validator mint_token {
+validator only_owner {
   else(_) {
     fail
   }
