@@ -9,3 +9,11 @@ pub fn isOwner(owner: VerificationKeyHash, tx: Transaction) -> Bool {
     True
   }
 }
+
+test is_owner() {
+  todo
+}
+
+test is_not_owner() {
+  todo
+}
