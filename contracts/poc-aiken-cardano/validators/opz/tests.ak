@@ -19,7 +19,7 @@ test is_owner() {
   opz.isOwner(owner, tx)
 }
 
-test is_owner() {
+test is_not_owner() {
   let tx = mock_tx_with_sign_owner()
   opz.isOwner(other, tx)
 }
