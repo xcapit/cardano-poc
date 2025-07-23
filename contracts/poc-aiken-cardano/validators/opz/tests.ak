@@ -1,7 +1,6 @@
 use cardano/transaction.{Transaction}
+use mocktail/virgin_key_hash.{mock_pub_key_hash}
 use opz/opz
-use mocktail/virgin_key_hash. mock_pub_key_hash}
-
 
 const owner = mock_pub_key_hash(0)
 
