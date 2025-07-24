@@ -10,8 +10,7 @@ pub type Action {
 validator mint_faucet {
 
   mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
-
-
+    
   }
 
   else(_) {
