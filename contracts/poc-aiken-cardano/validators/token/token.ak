@@ -4,7 +4,7 @@ use cardano/transaction.{OutputReference, Transaction}
 const TOKEN_NAME = "Xcapit"
 
 
-validator one_shot_mint {
+validator mint_faucet {
 
   else(_) {
     fail
