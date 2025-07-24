@@ -1,7 +1,7 @@
 use aiken/collection/dict
 use aiken/collection/list
 use cardano/assets.{PolicyId}
-use cardano/transaction.{Transaction, Output}
+use cardano/transaction.{Output, Transaction}
 
 const token_name = "Xcapit"
 
@@ -30,10 +30,7 @@ validator mint_faucet {
   }
 }
 
-const utxo_ref = = OutputReference {
-  tx_id: 0,
-  output_index: 0
-}
+const utxo_ref = OutputReference { tx_id: 0, output_index: 0 }
 
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
