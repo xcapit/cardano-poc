@@ -4,7 +4,7 @@ use token/token
 
 type TestCase {
   is_one_token: Bool,
-  is_multiple: Bool,
+  is_multiple_token: Bool,
 }
 
 fn mock_mint() {
