@@ -30,6 +30,8 @@ validator mint_faucet {
   }
 }
 
+const utxo_ref = 
+
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
     let Transaction { inputs, mint, .. } = tx
