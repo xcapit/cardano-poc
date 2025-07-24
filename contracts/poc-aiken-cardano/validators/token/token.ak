@@ -6,6 +6,7 @@ const token_name = "Xcapit"
 
 pub type Action {
   CheckMint
+  CheckBurn
 }
 
 validator mint_faucet {
