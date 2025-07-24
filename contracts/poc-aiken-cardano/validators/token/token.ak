@@ -9,7 +9,7 @@ pub type Action {
 
 validator mint_faucet {
 
-  mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
+  mint(rdmr: Data, _policy_id: PolicyId, _self: Transaction) {
 
 
   }
