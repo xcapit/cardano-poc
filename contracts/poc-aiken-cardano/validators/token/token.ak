@@ -1,5 +1,5 @@
 // use aiken/crypto.{VerificationKeyHash}
-use cardano/transaction.{OutputReference, Transaction}
+use cardano/transaction.{ Transaction}
 
 const TOKEN_NAME = "Xcapit"
 pub type Action {
