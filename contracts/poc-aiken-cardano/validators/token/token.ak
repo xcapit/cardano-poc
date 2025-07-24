@@ -1,14 +1,13 @@
 // use aiken/crypto.{VerificationKeyHash}
-use cardano/transaction.{ Transaction}
+use cardano/transaction.{Transaction}
 
-const TOKEN_NAME = "Xcapit"
+const token_name = "Xcapit"
+
 pub type Action {
   CheckMint
 }
 
-
 validator mint_faucet {
-
   mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
     let Transaction { mint, .. } = transaction
     expect [Pair(asset_name, amount)] =
@@ -16,9 +15,7 @@ validator mint_faucet {
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
     when rdmr is {
-      CheckMint -> {
-        amount > 0 && asset_name == TOKEN_NAME
-      }
+      CheckMint -> amount > 0 && asset_name == TOKEN_NAME
     }
   }
 
