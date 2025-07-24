@@ -5,7 +5,7 @@ use cardano/transaction.{Transaction}
 const token_name = "Xcapit"
 
 validator mint_faucet {
-  mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
+  mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
     let Transaction { mint, .. } = tx
     expect [Pair(asset_name, amount)] =
       mint
