@@ -18,7 +18,8 @@ fn mock_mint(test_case: TestCase) {
 }
 
 test mint_xcapit() {
-  let test_case = TestCase { is_one: True, is_one_more: False }
+  let test_case =
+    TestCase { is_one: True, is_one_more: False, is_one_zero: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint(test_case))
 }
 
