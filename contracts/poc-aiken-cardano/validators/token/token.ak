@@ -7,6 +7,8 @@ const token_name = "Xcapit"
 validator mint_faucet {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
     let Transaction { mint, .. } = tx
+
+    // REMEMBER: si se usa expect, y no cumple con la condicion crashea
     // expect [Pair(asset_name, amount)] =
     //   mint
     //     |> assets.tokens(policy_id)
