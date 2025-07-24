@@ -30,7 +30,7 @@ validator mint_faucet {
   }
 }
 
-const utxo_ref = 
+const utxo_ref = mock_utxo_ref(0, 0)
 
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
