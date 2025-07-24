@@ -1,7 +1,7 @@
 use aiken/collection/dict
 use aiken/collection/list
 use cardano/assets.{PolicyId}
-use cardano/transaction.{Output, Transaction}
+use cardano/transaction.{OutputReference, Transaction}
 
 const token_name = "Xcapit"
 
