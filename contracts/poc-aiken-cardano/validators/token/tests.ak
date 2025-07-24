@@ -8,10 +8,10 @@ type TestCase {
 }
 
 fn mock_mint(test_case: TestCase) {
-  let test_case =
-    mocktail_tx()
-      |> mint(True, 1, mock_policy_id(0), "Xcapit")
-      |> complete()
+  let TestCase = test_case
+  mocktail_tx()
+    |> mint(True, 1, mock_policy_id(0), "Xcapit")
+    |> complete()
 }
 
 test mint_xcapit() {
