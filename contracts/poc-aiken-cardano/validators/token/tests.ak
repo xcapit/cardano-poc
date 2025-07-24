@@ -7,5 +7,5 @@ fn mock_mint() {
 }
 
 test mint_xcapit() {
-  let tx = token.mint_faucet.mint()
+  token.mint_faucet.mint(mock_mint())
 }
