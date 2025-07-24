@@ -9,5 +9,5 @@ fn mock_mint() {
 }
 
 test mint_xcapit() {
-  token.mint_faucet.mint(mock_mint())
+  token.mint_faucet.mint(Void, mock_mint())
 }
