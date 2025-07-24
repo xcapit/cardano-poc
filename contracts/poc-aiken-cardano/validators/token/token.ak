@@ -4,7 +4,6 @@ use cardano/transaction.{OutputReference, Transaction}
 const TOKEN_NAME = "Xcapit"
 pub type Action {
   CheckMint
-  CheckBurn
 }
 
 
