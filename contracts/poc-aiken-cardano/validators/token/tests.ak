@@ -19,7 +19,8 @@ test mint_xcapit() {
   let test_case = TestCase { is_one: True, is_one_more: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint(test_case))
 }
-// test mint_xcapit_fail() {
-//   let test_case = TestCase { is_one: True, is_one_more: True }
-//   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint(test_case)) == False
-// }
+
+test mint_xcapit_fail() {
+  let test_case = TestCase { is_one: True, is_one_more: True }
+  token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint(test_case)) == False
+}
