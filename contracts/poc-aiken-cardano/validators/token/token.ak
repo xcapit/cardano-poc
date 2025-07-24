@@ -4,11 +4,6 @@ use cardano/transaction.{Transaction}
 
 const token_name = "Xcapit"
 
-pub type Action {
-  CheckMint
-  CheckBurn
-}
-
 validator mint_faucet {
   mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
     let Transaction { mint, .. } = tx
