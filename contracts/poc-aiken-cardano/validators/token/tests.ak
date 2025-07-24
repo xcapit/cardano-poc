@@ -7,10 +7,11 @@ type TestCase {
   is_other: Bool,
 }
 
-fn mock_mint() {
-  mocktail_tx()
-    |> mint(True, 1, mock_policy_id(0), "Xcapit")
-    |> complete()
+fn mock_mint(test_case: TestCase) {
+  let test_case =
+    mocktail_tx()
+      |> mint(True, 1, mock_policy_id(0), "Xcapit")
+      |> complete()
 }
 
 test mint_xcapit() {
