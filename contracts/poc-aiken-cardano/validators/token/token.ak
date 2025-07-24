@@ -10,10 +10,13 @@ pub type Action {
 validator mint_faucet {
 
   mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
+    let Transaction { inputs, mint, .. } = transaction
+    expect [Pair(asset_name, amount)] =
+      mint
+        |> assets.tokens(policy_id)
+        |> dict.to_pairs()
     when rdmr is {
       CheckMint -> {
-        expect
-          list.any(inputs, fn(input) { input.output_reference == utxo_ref })
         amount > 0 && asset_name == TOKEN_NAME
       }
     }
