@@ -4,16 +4,17 @@ use token/token
 
 type TestCase {
   is_one: Bool,
-  is_other: Bool,
+  is_one_more: Bool,
 }
 
 fn mock_mint(test_case: TestCase) {
-  let TestCase { is_one, is_other } = test_case
+  let TestCase { is_one, is_one_more } = test_case
   mocktail_tx()
     |> mint(True, 1, mock_policy_id(0), "Xcapit")
     |> complete()
 }
 
 test mint_xcapit() {
+  let test_case = TestCase { is_one: True, is_one_more: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint())
 }
