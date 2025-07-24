@@ -14,7 +14,7 @@ validator mint_faucet {
       CheckMint -> {
         expect
           list.any(inputs, fn(input) { input.output_reference == utxo_ref })
-        amount == 1 && asset_name == token_name
+        amount > 0 && asset_name == token_name
       }
     }
   }
