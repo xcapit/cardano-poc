@@ -9,5 +9,5 @@ fn mock_mint() {
 }
 
 test mint_xcapit() {
-  token.mint_faucet.mint(Void, mock_mint())
+  token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint())
 }
