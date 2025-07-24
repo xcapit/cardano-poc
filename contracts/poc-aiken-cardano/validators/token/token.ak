@@ -10,7 +10,7 @@ pub type Action {
 validator mint_faucet {
 
   mint(rdmr: Action, policy_id: PolicyId, tx: Transaction) {
-    let Transaction { inputs, mint, .. } = transaction
+    let Transaction { mint, .. } = transaction
     expect [Pair(asset_name, amount)] =
       mint
         |> assets.tokens(policy_id)
