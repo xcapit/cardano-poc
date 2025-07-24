@@ -15,7 +15,7 @@ validator mint_faucet {
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
     when rdmr is {
-      CheckMint -> amount > 0 && asset_name == TOKEN_NAME
+      CheckMint -> amount > 0 && asset_name == token_name
     }
   }
 
