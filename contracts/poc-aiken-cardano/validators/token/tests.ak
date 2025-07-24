@@ -3,8 +3,8 @@ use mocktail/virgin_key_hash.{mock_policy_id}
 use token/token
 
 type TestCase {
-  is_one_token: Bool,
-  is_multiple_token: Bool,
+  is_one: Bool,
+  is_other: Bool,
 }
 
 fn mock_mint() {
