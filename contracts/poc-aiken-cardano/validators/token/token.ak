@@ -15,9 +15,11 @@ validator mint_faucet {
       mint
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
-    amount > 0 && asset_name == token_name
 
-    ldt
+    when tokens is {
+      [Pair(asset_name, amount)] -> amount > 0 && asset_name == token_name
+      _ -> False
+    }
   }
 
   else(_) {
