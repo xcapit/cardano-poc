@@ -4,7 +4,7 @@ use token/token
 
 fn mock_mint() {
   mocktail_tx()
-    |> mint(True, 1, mock_policy_id(0), #"cffe")
+    |> mint(True, 1, mock_policy_id(0), #"Xcapit")
     |> complete()
 }
 
