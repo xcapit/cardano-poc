@@ -1,3 +1,4 @@
+use mocktail/virgin_key_hash.{mock_policy_id}
 use token/token
 
 fn mock_mint() {
