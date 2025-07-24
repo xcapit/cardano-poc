@@ -22,5 +22,5 @@ test mint_xcapit() {
 
 test mint_xcapit_fail() {
   let test_case = TestCase { is_one: True, is_one_more: True }
-  token.mint_faucet.mint(Void, mock_policy_id(1), mock_mint(test_case))
+  token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint(test_case)) == False
 }
