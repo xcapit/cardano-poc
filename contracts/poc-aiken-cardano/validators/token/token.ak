@@ -31,6 +31,7 @@ validator mint_faucet {
 
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
+    expect list.any(inputs, fn(input) { input.output_reference == utxo_ref })
     let Transaction { inputs, mint, .. } = tx
 
     // REMEMBER: si se usa expect, y no cumple con la condicion crashea
