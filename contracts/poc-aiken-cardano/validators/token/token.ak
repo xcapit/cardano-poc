@@ -1,3 +1,4 @@
+use aiken/collection/dict
 use cardano/assets.{PolicyId}
 use cardano/transaction.{Transaction}
 
