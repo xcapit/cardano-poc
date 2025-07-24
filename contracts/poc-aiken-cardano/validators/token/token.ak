@@ -1,4 +1,4 @@
-use aiken/crypto.{VerificationKeyHash}
+// use aiken/crypto.{VerificationKeyHash}
 use cardano/transaction.{OutputReference, Transaction}
 
 const token_name = "Xcapit"
