@@ -11,7 +11,7 @@ fn mock_mint(test_case: TestCase) {
   let TestCase { is_one, is_one_more } = test_case
   mocktail_tx()
     |> mint(is_one, 1, mock_policy_id(0), "Xcapit")
-    |> mint(is_one_negative, 1, mock_policy_id(0), "JD")
+    |> mint(is_one_zero, 1, mock_policy_id(0), "JD")
     |> mint(is_one_more, 1, mock_policy_id(0), "JD")
     |> complete()
 }
