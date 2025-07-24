@@ -29,7 +29,7 @@ validator mint_faucet {
   }
 }
 
-validator mint_faucet {
+validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
     let Transaction { mint, .. } = tx
 
