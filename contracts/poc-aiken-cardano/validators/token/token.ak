@@ -31,7 +31,7 @@ validator mint_faucet {
 
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
-    let Transaction { mint, .. } = tx
+    let Transaction { inputs, mint, .. } = tx
 
     // REMEMBER: si se usa expect, y no cumple con la condicion crashea
     // expect [Pair(asset_name, amount)] =
