@@ -5,6 +5,7 @@ use token/token
 type TestCase {
   is_one: Bool,
   is_one_more: Bool,
+  is_one_zero: Bool,
 }
 
 fn mock_mint(test_case: TestCase) {
