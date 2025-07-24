@@ -2,11 +2,17 @@
 use cardano/transaction.{OutputReference, Transaction}
 
 const TOKEN_NAME = "Xcapit"
+pub type Action {
+  CheckMint
+  CheckBurn
+}
 
 
 validator mint_faucet {
 
   mint(_redeemer: Data, _policy_id: PolicyId, _self: Transaction) {
+
+
   }
 
   else(_) {
