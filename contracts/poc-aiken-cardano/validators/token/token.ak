@@ -9,7 +9,7 @@ const token_name = "Xcapit"
 
 const token_symbol = "Xc"
 
-validator token {
+validator one_shot_mint {
   else(_) {
     fail
   }
