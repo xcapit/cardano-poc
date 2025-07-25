@@ -22,6 +22,7 @@ fn mock_mint_faucet(test_case: TestCase) {
 
 fn mock_mint_one_shot(test_case: TestCase) {
   let TestCase { is_one, is_one_more, is_one_zero } = test_case
+  trace @"mock_tx_hash(0)": mock_tx_hash(0)
   mocktail_tx()
     |> tx_in(
         True,
