@@ -36,13 +36,13 @@ fn mock_mint_one_shot(test_case: TestCase) {
     |> complete()
 }
 
-test mint_xcapit() {
+test mint_xcapit_faucet() {
   let test_case =
     TestCase { is_one: True, is_one_more: False, is_one_zero: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint_faucet(test_case))
 }
 
-test mint_jd_fail() fail {
+test mint_jd_faucet() fail {
   let test_case =
     TestCase { is_one: False, is_one_more: True, is_one_zero: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint_faucet(test_case))
