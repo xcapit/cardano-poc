@@ -17,7 +17,7 @@ fn mock_mint_faucet(test_case: TestCase) {
     |> complete()
 }
 
-fn mock_mint_faucet(test_case: TestCase) {
+fn mock_mint_one_shot(test_case: TestCase) {
   let TestCase { is_one, is_one_more, is_one_zero } = test_case
   mocktail_tx()
     |> mint(is_one, 1, mock_policy_id(0), "Xcapit")
