@@ -22,7 +22,11 @@ validator mint_faucet {
   }
 }
 
-const utxo_ref = OutputReference { transaction_id: "0", output_index: 0 }
+const utxo_ref =
+  OutputReference {
+    transaction_id: "CD82A190D3B4EF95A50BD791882959F541E308ADB69B12D022D94A6D9F02BCF0",
+    output_index: 0,
+  }
 
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
