@@ -20,6 +20,13 @@ fn mock_mint_faucet(test_case: TestCase) {
 fn mock_mint_one_shot(test_case: TestCase) {
   let TestCase { is_one, is_one_more, is_one_zero } = test_case
   mocktail_tx()
+    |> tx_in(
+        True,
+        mock_tx_hash(0),
+        0,
+        from_lovelace(10_000_000),
+        mock_pub_key_address(0, None),
+      )
     |> mint(is_one, 1, mock_policy_id(0), "Xcapit")
     |> mint(is_one_zero, 0, mock_policy_id(0), "Xcapit")
     |> mint(is_one_more, 1, mock_policy_id(0), "JD")
