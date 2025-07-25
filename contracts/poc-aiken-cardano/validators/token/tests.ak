@@ -90,7 +90,7 @@ test mint_xcapit_jd_one_shot() fail {
   )
 }
 
-test mint_zero_xcapit_fail() fail {
+test mint_zero_xcapit_one_shot() fail {
   let test_case =
     TestCase { is_one: False, is_one_more: False, is_one_zero: True }
   token.mint_one_shot.mint(
