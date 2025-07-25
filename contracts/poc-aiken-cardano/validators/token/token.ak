@@ -38,20 +38,19 @@ validator mint_one_shot {
     expect list.any(inputs, fn(input) { input.output_reference == utxo_ref })
 
     // REMEMBER: si se usa expect, y no cumple con la condicion crashea
-    expect [Pair(asset_name, amount)] =
-      mint
-        |> assets.tokens(policy_id)
-        |> dict.to_pairs()
-    amount > 0 && asset_name == token_name
-    // let tokens =
+    // expect [Pair(asset_name, amount)] =
     //   mint
     //     |> assets.tokens(policy_id)
     //     |> dict.to_pairs()
+    let tokens =
+      mint
+        |> assets.tokens(policy_id)
+        |> dict.to_pairs()
 
-    // when tokens is {
-    //   [Pair(asset_name, amount)] -> amount > 0 && asset_name == token_name
-    //   _ -> False
-    // }
+    when tokens is {
+      [Pair(asset_name, amount)] -> amount > 0 && asset_name == token_name
+      _ -> False
+    }
   }
 
   else(_) {
