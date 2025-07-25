@@ -62,7 +62,7 @@ test mint_zero_xcapit_fail() fail {
 
 test mint_xcapit_one_shot() {
   let test_case =
-    TestCase { is_one: False, is_one_more: False, is_one_zero: True }
+    TestCase { is_one: True, is_one_more: False, is_one_zero: False }
   token.mint_one_shot.mint(
     Void,
     mock_policy_id(0),
