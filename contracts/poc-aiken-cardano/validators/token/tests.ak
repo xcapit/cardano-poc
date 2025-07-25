@@ -1,3 +1,4 @@
+use cardano/assets.{from_lovelace}
 use mocktail.{complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_key_hash.{mock_policy_id}
 use mocktail/virgin_output_reference.{mock_tx_hash}
