@@ -48,7 +48,7 @@ test mint_jd_fail() fail {
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint_faucet(test_case))
 }
 
-test mint_jd_xcapit_fail() fail {
+test mint_jd_xcapit() fail {
   let test_case =
     TestCase { is_one: True, is_one_more: True, is_one_zero: False }
   token.mint_faucet.mint(Void, mock_policy_id(0), mock_mint_faucet(test_case))
