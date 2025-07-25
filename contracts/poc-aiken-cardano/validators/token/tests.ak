@@ -1,4 +1,4 @@
-use mocktail.{complete, mint, mocktail_tx}
+use mocktail.{complete, mint, mocktail_tx, tx_in}
 use mocktail/virgin_key_hash.{mock_policy_id}
 use token/token
 
