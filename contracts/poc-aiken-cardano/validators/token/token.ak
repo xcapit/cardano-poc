@@ -24,7 +24,7 @@ validator mint_faucet {
 
 const utxo_ref =
   OutputReference {
-    transaction_id: "CD82A190D3B4EF95A50BD791882959F541E308ADB69B12D022D94A6D9F02BCF0",
+    transaction_id: #"cd82a190d3b4ef95a50bd791882959f541e308adb69b12d022d94a6d9f02bcf0",
     output_index: 0,
   }
 
