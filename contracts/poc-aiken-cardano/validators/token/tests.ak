@@ -1,5 +1,5 @@
 use mocktail.{complete, mint, mocktail_tx, tx_in}
-use mocktail/virgin_key_hash.{mock_policy_id}
+use mocktail/virgin_key_hash.{mock_policy_id, mock_tx_hash}
 use token/token
 
 type TestCase {
