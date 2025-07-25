@@ -25,7 +25,7 @@ fn mock_mint_one_shot(test_case: TestCase) {
   mocktail_tx()
     |> tx_in(
         True,
-        mock_tx_hash(0),
+        "0",
         0,
         from_lovelace(10_000_000),
         mock_pub_key_address(0, None),
