@@ -14,15 +14,14 @@ validator mint_faucet {
     //   mint
     //     |> assets.tokens(policy_id)
     //     |> dict.to_pairs()
-    let tokens =
+    expect [Pair(asset_name, amount)] =
       mint
         |> assets.tokens(policy_id)
         |> dict.to_pairs()
-
-    when tokens is {
-      [Pair(asset_name, amount)] -> amount > 0 && asset_name == token_name
-      _ -> False
-    }
+    // when tokens is {
+    //   [Pair(asset_name, amount)] -> amount > 0 && asset_name == token_name
+    //   _ -> False
+    // }
   }
 
   else(_) {
