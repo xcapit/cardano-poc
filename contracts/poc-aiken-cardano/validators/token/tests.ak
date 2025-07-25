@@ -82,7 +82,7 @@ test mint_jd_one_shot() fail {
 
 test mint_xcapit_jd_one_shot() fail {
   let test_case =
-    TestCase { is_one: tRYE, is_one_more: True, is_one_zero: False }
+    TestCase { is_one: True, is_one_more: True, is_one_zero: False }
   token.mint_one_shot.mint(
     Void,
     mock_policy_id(0),
