@@ -31,7 +31,6 @@ const utxo_ref =
 validator mint_one_shot {
   mint(_redeemer: Data, policy_id: PolicyId, tx: Transaction) {
     let Transaction { inputs, mint, .. } = tx
-    trace @"utxo_ref": utxo_ref
     expect list.any(inputs, fn(input) { input.output_reference == utxo_ref })
     expect [Pair(asset_name, amount)] =
       mint
